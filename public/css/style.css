@@ -1,3 +1,49 @@
 body {
   background-color: #d4e026;
 }
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2em;
+  line-height: 1em; 
+  background-color: #fefefe;
+  color:rgba(3, 4, 5, 0.75)
+  }
+  
+h1 {
+  font-weight:normal; 
+  text-shadow:0 0 15px #AAB2C0; 
+  font-size:1.2em; 
+  border-bottom: 3px double; 
+  padding-bottom: 25px;
+}
+
+p {
+  font-weight:normal; 
+  font-size: 0.6em; 
+  line-height: 1.5em;
+}
+
+a {
+  font-weight:bold; 
+  text-decoration: none; 
+  color: inherit;
+}
+
+a:hover {
+  font-weight:bold; 
+  text-decoration: none; 
+  text-shadow: 0 0 35px #yellow
+}
+
+.left {
+  float: left;
+}
+
+div.col {
+  display:block; 
+  width: 260px; 
+  margin: 5px; 
+  padding: 0 20px; 
+  float: left;
+}
