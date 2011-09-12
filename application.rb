@@ -27,5 +27,9 @@ class Application < Sinatra::Base
   get '/' do
     haml :index
   end
+
+  get '/bio' do
+    haml :bio
+  end
 end
 
