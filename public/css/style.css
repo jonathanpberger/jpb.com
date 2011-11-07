@@ -1,8 +1,4 @@
-body {
-  background-color: #d4e026;
-}
-
-body {
+body #home {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
   line-height: 1em; 
@@ -10,7 +6,7 @@ body {
   color:rgba(3, 4, 5, 0.75)
   }
   
-h1 {
+#home h1 {
   font-weight:normal; 
   text-shadow:0 0 15px #AAB2C0; 
   font-size:1.2em; 
@@ -40,10 +36,33 @@ a:hover {
   float: left;
 }
 
-div.col {
+#home div.col {
   display:block; 
   width: 260px; 
   margin: 5px; 
   padding: 0 20px; 
   float: left;
+}
+
+.code-management {
+  line-height: 28px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333; 
+}
+
+dl {
+  margin-left: 25px;
+  
+}
+
+dt {
+  float: left;
+  margin-right: 25px;
+  width: 425px;
+}
+
+dt {
+  float: left;
+  clear: right;
 }
