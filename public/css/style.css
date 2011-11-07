@@ -20,7 +20,7 @@ p {
   line-height: 1.5em;
 }
 
-a {
+#home a {
   font-weight:bold; 
   text-decoration: none; 
   color: inherit;
@@ -65,4 +65,11 @@ dt {
 dt {
   float: left;
   clear: right;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none; 
+  border-bottom: 1px solid #ccc;
+  color: inherit;
 }
