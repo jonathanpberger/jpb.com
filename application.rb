@@ -32,6 +32,10 @@ class Application < Sinatra::Base
     haml :bio
   end
 
+  get '/talks' do
+    haml :talks
+  end
+
   get '/code_management' do
     haml :code_management
   end
