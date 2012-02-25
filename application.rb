@@ -39,5 +39,9 @@ class Application < Sinatra::Base
   get '/code_management' do
     haml :code_management
   end
+
+  get '/code_as_lit' do
+    haml :code_as_lit
+  end
 end
 
