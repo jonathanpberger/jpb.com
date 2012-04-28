@@ -36,6 +36,10 @@ class Application < Sinatra::Base
     haml :talks
   end
 
+  get '/blog' do
+    redirect "http://jonathanpberger.wordpress.com"
+  end
+
   get '/code_management' do
     haml :code_management
   end
