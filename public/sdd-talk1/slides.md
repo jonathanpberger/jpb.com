@@ -5,7 +5,7 @@
 
 > Jonathan Berger, Pivotal Labs, October 2012
 
-> for the Agile Experience Design Co-Meetup 
+> for the Agile Experience Design Co-Meetup
 
 > with the New York Compass and Sass Meetup
 
@@ -35,32 +35,32 @@ The plan:
 
 ---
 
-### Adobe-app-based design 
+### Adobe-app-based design
 ## Good for...
-- • Designing before any software is built, 
-- • Quickly iterating on user flows, 
-- • Experimenting with new high-level concepts. 
+- • Designing before any software is built,
+- • Quickly iterating on user flows,
+- • Experimenting with new high-level concepts.
 
 ---
 
-### Adobe-app-based design 
+### Adobe-app-based design
 ## Terrible because...
 - • Once working software exists, mockups have to play catchup with reality
 - • Does little to aid in designing interactions
 
 ---
 
-### Designing in the browser 
+### Designing in the browser
 ## Good for...
-- • Working out low-level tactics, 
-- • Quickly iterating on interface and small interactions, 
+- • Working out low-level tactics,
+- • Quickly iterating on interface and small interactions,
 - • ~$0 set-up cost
 
 ---
 
-### Designing in the browser 
+### Designing in the browser
 ## Terrible because...
-- • The toolset and techniques are immature, 
+- • The toolset and techniques are immature,
 - • Saving your work is difficult,
 - • High learning curve, and
 - • The tools are tantalizingly close to the real app on the front end, entirely missing on the back end.
@@ -84,22 +84,22 @@ The plan:
 ### Interlude:
 # What's a spike?
 
-- • An Agile "spike" is a **short investigation** into a technique or a problem. 
+- • An Agile "spike" is a **short investigation** into a technique or a problem.
 - • By nature it's explicitly exploratory and limited, and **the goal is learning**.
-- • After a spike is completed, the **code *must* be thrown away**. 
+- • After a spike is completed, the **code *must* be thrown away**.
 
 ---
 
 # HOW
 ### Do I SDD?
 
-- • Branch the project, 
+- • Branch the project,
 - • Gleefully and recklessly hack around,
 - • Write fake methods if needed,
 
 ---
 ## How to SDD
-- • Write comments like `# TODO: make this real`, 
+- • Write comments like `# TODO: make this real`,
 - • Quick fixes and polish, while I'm in context,
 - • As I work, I'll play around with the interaction,
 
@@ -115,18 +115,18 @@ The plan:
 
 - • Go back through my work and break changes down into **small, atomic commits**
 - • I hop onto the master branch
-- • `git cherrypick` the styling commits
+- • `git cherry-pick` the styling commits
 
 ---
 
-# **BOOM!** 
+# **BOOM!**
 ## Free style tweaks and polish!
 
 ---
 ## Phase Two
 
-- • Devs get to the SDD'd stories in the backlog (which ideally is within a few days). 
-- • There's a comment pointing them to the branch, 
+- • Devs get to the SDD'd stories in the backlog (which ideally is within a few days).
+- • There's a comment pointing them to the branch,
 - • which they can **check out as a renamed repo** and then **run on another port**:
 
 ---
@@ -140,12 +140,12 @@ The plan:
 `rails server -p5555`
 
 ---
-    
+
 ## During development
-- • Run the real app on port 3000 and do everything normally, 
-- • Living, functional mock-ups exist for reference on port 5555. 
+- • Run the real app on port 3000 and do everything normally,
+- • Living, functional mock-ups exist for reference on port 5555.
 - • They can take a look at the code for ideas on things like structuring the DOM, and can even
-- • Harvest things like SASS and assets from the branch. 
+- • Harvest things like SASS and assets from the branch.
 
 ---
 
@@ -154,15 +154,15 @@ The plan:
 ---
 
 # When / Where?
-So what sorts of projects and teams are good candidates for SDD? 
+So what sorts of projects and teams are good candidates for SDD?
 
 - • We've established the basic design of the app ,
-- • We're building a fair number of small or medium-sized features or feature tracks, 
-- • and it's important that we make sure our additions work well within the existing app and user flows. 
+- • We're building a fair number of small or medium-sized features or feature tracks,
+- • and it's important that we make sure our additions work well within the existing app and user flows.
 
 ---
 ## Bonus
-- • SDD stories pull me into the pair rotation in a non-time-sensitive manner, which helps smooth out rough spots in the rotation if someone has a doctors appointment or is interviewing a candidate. 
+- • SDD stories pull me into the pair rotation in a non-time-sensitive manner, which helps smooth out rough spots in the rotation if someone has a doctors appointment or is interviewing a candidate.
 
 ---
 ## TL;DR
@@ -172,9 +172,9 @@ So what sorts of projects and teams are good candidates for SDD?
 
 ## Problems w/ SDD
 
-- • Because of the technical requirements, there's a **high learning curve** for the designer. 
-- • **It's a little shady** to push real work into comments saying "make this real". 
-- • **Sub-production-quality code** may leak in. 
+- • Because of the technical requirements, there's a **high learning curve** for the designer.
+- • **It's a little shady** to push real work into comments saying "make this real".
+- • **Sub-production-quality code** may leak in.
 - • The SDD branch **gets stale quickly**.
 
 ---
