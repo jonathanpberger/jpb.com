@@ -1,0 +1,290 @@
+
+<html>
+  <head>
+    <link href="css/reset.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="css/favicon.png" />
+    <link rel="apple-touch-icon" href="css/apple-touch-icon.png" />
+    <!-- Code Prettifier: -->
+<link href="css/prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/prettify.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,800italic,300,400,800' rel='stylesheet' type='text/css'>    
+
+
+  </head>
+
+  <body onload="prettyPrint()">
+  <div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+    <div id="impress">
+    <div class='step' >
+    
+<h1>Hello</h1>
+</div>
+      <div class='step' >
+    
+<h1>Spike Driven Design</h1>
+
+<blockquote>
+<p>Jonathan Berger, Pivotal Labs, October 2012</p>
+
+<p>for the Agile Experience Design Co-Meetup </p>
+
+<p>with the New York Compass and Sass Meetup</p>
+</blockquote>
+</div>
+      <div class='step' >
+    
+<p>The plan:</p>
+
+<h1>~15 minutes</h1>
+</div>
+      <div class='step' >
+    
+<h1>What</h1>
+
+<h3>is Spike Driven Design?</h3>
+</div>
+      <div class='step' >
+    
+<h3>TL;DR</h3>
+
+<h2>Spike-Driven Development</h2>
+
+<ul>
+<li>• <strong>Design in Rails</strong> with throw-away code,</li>
+<li>• <strong>Screenshoot</strong> working software for mocks,</li>
+<li>• <strong>Cherry-pick small changes</strong> and contribute them back,</li>
+<li>• <strong>Devs can harvest code</strong> when they go through and TDD the stories.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>The Problem</h1>
+</div>
+      <div class='step' >
+    
+<h3>Adobe-app-based design</h3>
+
+<h2>Good for...</h2>
+
+<ul>
+<li>• Designing before any software is built, </li>
+<li>• Quickly iterating on user flows, </li>
+<li>• Experimenting with new high-level concepts. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>Adobe-app-based design</h3>
+
+<h2>Terrible because...</h2>
+
+<ul>
+<li>• Once working software exists, mockups have to play catchup with reality</li>
+<li>• Does little to aid in designing interactions</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>Designing in the browser</h3>
+
+<h2>Good for...</h2>
+
+<ul>
+<li>• Working out low-level tactics, </li>
+<li>• Quickly iterating on interface and small interactions, </li>
+<li>• ~$0 set-up cost</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>Designing in the browser</h3>
+
+<h2>Terrible because...</h2>
+
+<ul>
+<li>• The toolset and techniques are immature, </li>
+<li>• Saving your work is difficult,</li>
+<li>• High learning curve, and</li>
+<li>• The tools are tantalizingly close to the real app on the front end, entirely missing on the back end.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>Enter</h3>
+
+<h1>Spike Driven Design</h1>
+</div>
+      <div class='step' >
+    
+<h2>Spike Driven Design</h2>
+
+<ul>
+<li>• <strong>Design in Rails</strong> itself, using mostly SASS and HAML and little bits of Ruby.</li>
+<li>• No tests; this is <strong>throw-away code</strong>.</li>
+<li>• Move fast, <strong>focus on the UX</strong> and visual design problems.</li>
+<li>• Design using the <strong>actual medium</strong> the user will end up with: working software.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>Interlude:</h3>
+
+<h1>What&#39;s a spike?</h1>
+
+<ul>
+<li>• An Agile &quot;spike&quot; is a <strong>short investigation</strong> into a technique or a problem. </li>
+<li>• By nature it&#39;s explicitly exploratory and limited, and <strong>the goal is learning</strong>.</li>
+<li>• After a spike is completed, the <strong>code <em>must</em> be thrown away</strong>. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>HOW</h1>
+
+<h3>Do I SDD?</h3>
+
+<ul>
+<li>• Branch the project, </li>
+<li>• Gleefully and recklessly hack around,</li>
+<li>• Write fake methods if needed,</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>How to SDD</h2>
+
+<ul>
+<li>• Write comments like <code class='inline prettyprint'># TODO: make this real</code>, </li>
+<li>• Quick fixes and polish, while I&#39;m in context,</li>
+<li>• As I work, I&#39;ll play around with the interaction,</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>How to SDD</h2>
+
+<ul>
+<li>• <strong>Check in regularly</strong> w/ the PM &amp; Devs,</li>
+<li>• <strong>Write stories in Tracker</strong> and take screenshots of the SDD site and attach them as mock ups,</li>
+<li>• I&#39;ll also <strong>create an epic</strong> called &quot;SDD&quot;, with a note mentioning where the branch lives and what I&#39;ve done in it.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>How to SDD</h2>
+
+<ul>
+<li>• Go back through my work and break changes down into <strong>small, atomic commits</strong></li>
+<li>• I hop onto the master branch</li>
+<li>• <code class='inline prettyprint'>git cherrypick</code> the styling commits</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1><strong>BOOM!</strong></h1>
+
+<h2>Free style tweaks and polish!</h2>
+</div>
+      <div class='step' >
+    
+<h2>Phase Two</h2>
+
+<ul>
+<li>• Devs get to the SDD&#39;d stories in the backlog (which ideally is within a few days). </li>
+<li>• There&#39;s a comment pointing them to the branch, </li>
+<li>• which they can <strong>check out as a renamed repo</strong> and then <strong>run on another port</strong>:</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<p><code class='inline prettyprint'>git clone git@github.com:jonathanpberger/hamazon.git hamazon-sdd-order_history</code></p>
+
+<p><code class='inline prettyprint'>cd hamazon-sdd-order_history</code></p>
+
+<p>... (bundle, set up db&#39;s, etc)</p>
+
+<p><code class='inline prettyprint'>rails server -p5555</code></p>
+</div>
+      <div class='step' >
+    
+<h2>During development</h2>
+
+<ul>
+<li>• Run the real app on port 3000 and do everything normally, </li>
+<li>• Living, functional mock-ups exist for reference on port 5555. </li>
+<li>• They can take a look at the code for ideas on things like structuring the DOM, and can even</li>
+<li>• Harvest things like SASS and assets from the branch. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h3>This means that a lot of the work from the design phase can go directly into the finished project, without duplication of effort, and without sacrificing quality.</h3>
+</div>
+      <div class='step' >
+    
+<h1>When / Where?</h1>
+
+<p>So what sorts of projects and teams are good candidates for SDD? </p>
+
+<ul>
+<li>• We&#39;ve established the basic design of the app ,</li>
+<li>• We&#39;re building a fair number of small or medium-sized features or feature tracks, </li>
+<li>• and it&#39;s important that we make sure our additions work well within the existing app and user flows. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Bonus</h2>
+
+<ul>
+<li>• SDD stories pull me into the pair rotation in a non-time-sensitive manner, which helps smooth out rough spots in the rotation if someone has a doctors appointment or is interviewing a candidate. </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>TL;DR</h2>
+
+<h3>SDD seems to work well on projects that&#39;re past their initial design phase, and have small- to medium-sized teams with a technical designer.</h3>
+</div>
+      <div class='step' >
+    
+<h2>Problems w/ SDD</h2>
+
+<ul>
+<li>• Because of the technical requirements, there&#39;s a <strong>high learning curve</strong> for the designer. </li>
+<li>• <strong>It&#39;s a little shady</strong> to push real work into comments saying &quot;make this real&quot;. </li>
+<li>• <strong>Sub-production-quality code</strong> may leak in. </li>
+<li>• The SDD branch <strong>gets stale quickly</strong>.</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Conclusion</h2>
+
+<p>Despite these shortcomings, SDD has proven to be an effective technique for our team. We look forward to continuing to explore this way of working, and especially to hearing if it works for others.</p>
+</div>
+      <div class='step' >
+    
+<h2>Find me at</h2>
+
+<h2>jonathanpberger@</h2>
+
+<h2>pivotallabs.com, gmail.com, twitter, forrst, flickr, etc...</h2>
+
+<h1>Thanks!</h1>
+
+<h2>Any questions?</h2>
+
+      </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
+    
