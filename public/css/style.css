@@ -1,4 +1,6 @@
-body #home {
+body #home,
+body .bio
+ {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
   line-height: 1em; 
