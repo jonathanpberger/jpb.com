@@ -40,6 +40,12 @@ class Application < Sinatra::Base
     redirect "http://jonathanpberger.wordpress.com"
   end
 
+  ["/cv", "/resume", "/resume.pdf"].each do |path|
+    get path do
+      redirect "http://jonathanpberger.com/cv.pdf"
+    end
+  end
+
   get '/code_management' do
     haml :code_management
   end
