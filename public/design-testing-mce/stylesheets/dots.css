@@ -1,0 +1,43 @@
+/****************** Dots ****************/
+
+@import url(http://fonts.googleapis.com/css?family=Codystar:300,400|Raleway+Dots);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+body { 
+  font-family: 'Droid Serif'
+}
+
+h1, h2, h3 {
+  font-family: 'Alfa Slab One';
+  font-weight: normal;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* .remark-slide-content > h1 { */
+  /* font-size: 3em; */
+  /* color: #333; */
+  /* line-height: 0.8em; */
+  /* text-transform: uppercase; */
+/* } */
+
+/* .remark-slide-content > h2 { */
+
+  /* font-size: 2em; */
+  /* color: #666; */
+/* } */
+
+/* .remark-slide-content > h3 { */
+  /* font-size: 0.8em; */
+  /* color: #999; */
+/* } */
+
+.remark-code,
+.remark-inline-code { 
+  font-family: 'Ubuntu Mono'; 
+}
+
+
