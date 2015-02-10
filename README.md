@@ -11,4 +11,5 @@
 - create logo salad for events
 - move talks to gh-pages
 - convert talks to PDF, add to speakerdeck
+- move old talks to remark.js
 
