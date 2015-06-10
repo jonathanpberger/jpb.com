@@ -1,37 +1,63 @@
-body #home,
-body .bio
+@font-face {
+    font-family: "Ars";
+    src: url('../fonts/ARSMaquette-Black.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Ars";
+    src: url('../fonts/ARSMaquette-Regular.otf');
+}
+
+@font-face {
+    font-family: "Ars";
+    src:      url('../fonts/ARSMaquette-RegularItalic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ars";
+    src: url('../fonts/ARSMaquette-BlackItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body
  {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Ars", Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
-  line-height: 1em; 
-  background-color: #fefefe;
-  color:rgba(3, 4, 5, 0.75)
+  line-height: 1em;
+  background-color: #333;
+  color: #eee;
+  background-color: #eee;
+  color: #333;
   }
-  
+
 #home h1 {
-  font-weight:normal; 
-  text-shadow:0 0 15px #AAB2C0; 
-  font-size:1.2em; 
-  border-bottom: 3px double; 
+  font-weight: bold;
+  font-size:1.1em;
+  border-bottom: 3px solid;
   padding-bottom: 25px;
+  text-transform: uppercase;
 }
 
 p {
-  font-weight:normal; 
-  font-size: 0.6em; 
+  font-weight:normal;
+  font-size: 0.6em;
   line-height: 1.5em;
 }
 
-#home a {
-  font-weight:bold; 
-  text-decoration: none; 
+a {
+  /*font-weight: bold;*/
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
   color: inherit;
 }
 
 a:hover {
-  font-weight:bold; 
-  text-decoration: none; 
-  text-shadow: 0 0 35px #yellow
+  background: yellow;
+  color: black;
+  border-bottom: 1px solid yellow;
 }
 
 .left {
@@ -39,10 +65,10 @@ a:hover {
 }
 
 #home div.col {
-  display:block; 
-  width: 260px; 
-  margin: 5px; 
-  padding: 0 20px; 
+  display:block;
+  width: 260px;
+  margin: 5px;
+  padding: 0 20px;
   float: left;
 }
 
@@ -50,12 +76,12 @@ a:hover {
   line-height: 28px;
   font-size: 18px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333; 
+  color: #333;
 }
 
 dl {
   margin-left: 25px;
-  
+
 }
 
 dt {
@@ -67,11 +93,4 @@ dt {
 dt {
   float: left;
   clear: right;
-}
-
-a {
-  font-weight: bold;
-  text-decoration: none; 
-  border-bottom: 1px solid #ccc;
-  color: inherit;
 }
