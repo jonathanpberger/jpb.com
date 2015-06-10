@@ -36,6 +36,10 @@ class Application < Sinatra::Base
     haml :talks
   end
 
+  get '/events' do
+    haml :events
+  end
+
   get '/blog' do
     redirect "http://jonathanpberger.wordpress.com"
   end
