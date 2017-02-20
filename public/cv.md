@@ -5,21 +5,29 @@ Phone: (718) 930-2165
 
 # BIO
 
-Jonathan Berger is a designer, developer, agilist and technologist who has been active in the NYC technology scene since around 2005. As a consultant he’s been on the team with almost 30 startups and enterprises in the past few years, and has spent the last seven years building 1) software and 2) an agile design practice at Pivotal Labs. 
+Jonathan Berger is a designer, developer, agilist and technologist who has been active in the NYC technology scene since around 2005. As a consultant over the past few years he’s been on almost 40 teams ranging from startups to enterprise, across every imaginable sector. He's spent the last several years focused on 1) building awesome software and 2) making designers lives better using agile and lean principles.
 
 # SELECTED WORK EXPERIENCE  
 
-## Associate Director of Product Design, Pivotal Labs, NY, NY 2008-2015.
-In 2008 I joined Pivotal Labs as the first designer in their fledgling NY office, designing apps and coaching client designers using Lean, Agile, XP, and Test-Driven methodologies. My responsibilities grew to include coding and project-managing, leading inceptions and anchoring projects as I grew with (and helped run) the office. In 2011 I became a manager, mentoring 10 engineers and getting more involved in sales. When a design practice was officially started in 2012, I ran the NY practice, hiring and managing designers. In 2014 I was recognized as an Associate Director of Product Design and ceased taking on full-time client work to focus on the practice full-time.
+## VP Product, Thrive Global, NY, NY 2017
+Guide practice and product among a portfolio of front- and back-end web software, apps for iOS, Android, Alexa, and others.
 
-## Founder, Market Publique, Brooklyn, NY 2008-2013
+## Consultant, NY, NY 2015-2016
+Coached companies in design and agile, usually in moments of transition, to adapt their practices to the changing realities of their business and the market, while tying process changes to concrete outcomes and deliverables. Clients include Vive (beauty), WiredScore & WiredConcierge (telecom), 2U (ed-tech), and Alpha (UX & product design enablement).
+
+## Associate Director of Product Design, Pivotal Labs, NY, NY 2008-2015
+Led a team of ~10 designers, building an agile design practice and methodology.
+Built web and mobile applications using Agile, XP, and Test-Driven methodologies.
+Every day I'd code, design, anchor teams, lead inceptions, manage reports, and help run the office.  At Pivotal I’ve also been a Designer, Engineering Manager, and Design Manager.
+
+## Co-founder, Market Publique, Brooklyn, NY 2008-2013
 Helped design and build an online vintage fashion marketplace, helping people buy and sell vintage clothes and build community around fashion. Launched at SxSW in 2008.
 
 ## Founder, Publique Domain, Brooklyn, NY 2008-2009
 Spun a product design studio off of Market Publique, working with clients like Spot.Us, the Anti-Defamation League, and NewsTrust.
 
-## Designer, American Museum of Natural History, NY, NY 2007-2008
-Developed animations and motion graphics for the the Interactive division of the Exhibitions department for the Horses and Hall of Human Origins shows.
+## Designer,  American Museum of Natural History, NY, NY 2007-2008
+Developed animations and motion graphics for the the Interactive division of the Exhibitions department for the Horses and Hall of Human Origins shows. 
 
 ## Video Editor & Technology Consultant, MTV Networks, NY, NY 2006-2007
 Edited and animated video, designed work protocols & archiving systems, and wrote documentation for TVLand.com.
@@ -27,13 +35,11 @@ Edited and animated video, designed work protocols & archiving systems, and wrot
 # SKILLS
 
 - Expert in Agile, Lean Startup, and Extreme Programming (XP) methodologies.
-- Experienced Product Designer, with a strong emphasis on User Experience (UX), Visual Design, and Product Management skills in both desktop and mobile applications.
-- Experience leading design and project teams.
-- Experienced with modern web development tools and frameworks including Ruby, Javascript, HTML, CSS, and shell scripting.
+- Experienced product designer (desktop and mobile), with a strong emphasis on User Experience (UX) and experience with Visual Design, Front-end engineering.
+- Experienced with modern web development tools including Ruby, Javascript, HTML, CSS, (including frameworks Rails, React, Node, Express, SASS, and many more) and shell scripting.
 - Adobe Certified Expert in Photoshop.
 - Extremely high level of proficiency in Vim, Adobe Creative Suite, AfterEffects, Final Cut Studio.
-- Years of experience with {Microsoft, Google, Libre} Office suites, cloud computing and various productivity applications. I know how computers and the internet work.
-- Extensive photography and videography production and post-production experience for broadcast and internet.
+- Extensive photography, animation, and videography production and post-production experience for broadcast and internet.
 
 # EDUCATION
 
@@ -53,7 +59,7 @@ Jonathan is an internationally-sought speaker who talks about startups, design, 
 Portfolio of talks at http://www.jonathanpberger.com/talks. 
 
 # WORK SAMPLES, & REFERENCES
-Work samples and references available upon request. 
+Portfolio of talks at http://www.jonathanpberger.com/talks, writings at jonathanpberger.com/blog, and references & portfolio available upon request. Code lives at http://github.com/jonathanpberger. 
 
 
 
