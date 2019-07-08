@@ -9,7 +9,7 @@ class Application < Sinatra::Base
     enable :static
 
     set :views,  File.join(File.dirname(__FILE__), 'views')
-    set :public, File.join(File.dirname(__FILE__), 'public')
+    set :public_folder, File.join(File.dirname(__FILE__), 'public_folder')
   end
 
   helpers do

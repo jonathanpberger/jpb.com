@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 4c4bbf991ec31ccfa03ea26f3b8101224f2b6b73 jonathanpberger <pair+jonathanpberger@gmail.com> 1422821655 -0500	branch: Created from HEAD
-4c4bbf991ec31ccfa03ea26f3b8101224f2b6b73 b52911fe508efbe0e7cb7cfc36c2fcc0dd72dc08 jonathanpberger <pair+jonathanpberger@gmail.com> 1422821792 -0500	commit: Remove ruby.
-b52911fe508efbe0e7cb7cfc36c2fcc0dd72dc08 696ae0c2e2d7a60f92e05588bd838ec6a8bf39ca jonathanpberger <pair+jonathanpberger@gmail.com> 1422924797 -0500	commit: Tried packing up node for heroku. Didn't work.
