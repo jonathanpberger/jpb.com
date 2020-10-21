@@ -16,10 +16,11 @@
 - [] move talks to gh-pages
 - [] convert talks to PDF, add to speakerdeck
 - [] move old talks to remark.js
+- [] add Polish MCE panel to talks
 
 # Scratch
 
-Polish MCE panel to be added to talks:
+Polish MCE panel to be added to talks
 
 https://www.youtube.com/watch?v=rQOYH_hJG5Y
 
