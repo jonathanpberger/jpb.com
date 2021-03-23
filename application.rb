@@ -40,13 +40,15 @@ class Application < Sinatra::Base
     haml :events
   end
 
-  get '/blog' do
-    redirect "http://jonathanpberger.wordpress.com"
-  end
-
   ["/cv", "/resume", "/resume.pdf"].each do |path|
     get path do
       redirect "http://jonathanpberger.com/cv.pdf"
+    end
+  end
+
+  ["/cal", "/calendar", "/calendly"].each do |path|
+    get path do
+      redirect "https://calendly.com/jonathanpberger"
     end
   end
 
