@@ -46,6 +46,12 @@ class Application < Sinatra::Base
     end
   end
 
+  ["/blog"].each do |path|
+    get path do
+      redirect "http://jonathanpberger.wordpress.com"
+    end
+  end
+
   ["/cal", "/calendar", "/calendly"].each do |path|
     get path do
       redirect "https://calendly.com/jonathanpberger"
