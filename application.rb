@@ -42,7 +42,7 @@ class Application < Sinatra::Base
 
   ["/cv", "/resume", "/resume.pdf"].each do |path|
     get path do
-      redirect "http://jonathanpberger.com/cv.pdf"
+      redirect "/cv.pdf"
     end
   end
 
