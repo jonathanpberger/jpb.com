@@ -1,29 +1,30 @@
+
 @font-face {
-    font-family: "Ars";
-    src: url('../fonts/ARSMaquette-Black.otf');
-    font-weight: bold;
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-Black.otf');
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "Ars";
-    src: url('../fonts/ARSMaquette-Regular.otf');
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-Regular.otf');
 }
 
 @font-face {
-    font-family: "Ars";
-    src:      url('../fonts/ARSMaquette-RegularItalic.otf');
-    font-style: italic;
+  font-family: "Ars";
+  src:      url('../fonts/ARSMaquette-RegularItalic.otf');
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "Ars";
-    src: url('../fonts/ARSMaquette-BlackItalic.otf');
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-BlackItalic.otf');
     font-weight: bold;
     font-style: italic;
 }
 
 body
- {
+{
   font-family: "Ars", Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
   line-height: 1em;
@@ -31,17 +32,24 @@ body
   color: #eee;
   background-color: #eee;
   color: #333;
-  }
+}
 
 #home h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'BioRhyme Expanded', serif;
+  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-size:1.1em;
+  font-size:1em;
   border-bottom: 3px solid;
   padding-bottom: 25px;
   text-transform: uppercase;
 }
 
 p {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight:normal;
   font-size: 0.6em;
   line-height: 1.5em;

@@ -10,8 +10,8 @@
 
 
 ## Talks page
-- [] add UX holiday party
 - [x] add favorited tweets from conf. praise
+- [] add UX holiday party
 - [] create logo salad for events
 - [] move talks to gh-pages
 - [] convert talks to PDF, add to speakerdeck

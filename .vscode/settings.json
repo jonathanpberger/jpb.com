@@ -1,7 +1,9 @@
+// JPB.com colors...ish.
 {
+  "workbench.colorTheme": "GreyJungle",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#332A39",
-    "titleBar.activeBackground": "#473B4F",
-    "titleBar.activeForeground": "#FBFAFB"
+    "activityBar.background": "#521D08",
+    "titleBar.activeBackground": "#72280B",
+    "titleBar.activeForeground": "#FEFAF9"
   }
 }
