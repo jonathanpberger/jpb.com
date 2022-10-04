@@ -5,15 +5,17 @@ GEM
       temple (>= 0.8.0)
       tilt
     maruku (0.7.3)
-    mustermann (1.0.3)
+    mustermann (2.0.2)
+      ruby2_keywords (~> 0.0.1)
     rack (2.2.3)
-    rack-protection (2.0.5)
+    rack-protection (2.2.2)
       rack
     rake (13.0.1)
-    sinatra (2.0.5)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.5)
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.2)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.2)
       tilt (~> 2.0)
     temple (0.8.1)
     tilt (2.0.9)
@@ -22,11 +24,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml
-  maruku
-  rack (>= 2.1.4)
-  rake (>= 12.3.3)
-  sinatra
+  haml (~> 5.1)
+  maruku (~> 0.7.3)
+  rack (~> 2.2)
+  rake (~> 13.0)
+  sinatra (~> 2.2)
 
 RUBY VERSION
    ruby 2.7.5p203
