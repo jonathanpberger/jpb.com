@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby "2.7.2"
+ruby "2.7.5"
 
 gem "rack", ">= 2.1.4"
 gem "rake", ">= 12.3.3"
