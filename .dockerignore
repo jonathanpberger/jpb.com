@@ -1,0 +1,6 @@
+# flyctl launch added from .gitignore
+**/.DS_Store
+**/node_modules
+
+# flyctl launch added from public_folder/nyc-sustain/.gitignore
+public_folder/nyc-sustain/**/.DS_Store
