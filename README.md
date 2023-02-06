@@ -2,9 +2,8 @@
 
 `$ rackup config.ru`
 
-# Deploy to heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jonathanpberger/jpb.com)
-
+# Deploy to fly.io
+- `fly deploy`
 
 # TODO:
 
