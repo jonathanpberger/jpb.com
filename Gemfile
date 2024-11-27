@@ -1,8 +1,10 @@
-source 'http://rubygems.org'
-ruby "2.7.2"
+source 'https://rubygems.org'
 
-gem "rack", ">= 2.1.4"
-gem "rake", ">= 12.3.3"
-gem 'haml'
-gem 'maruku'
-gem 'sinatra'
+gem "jekyll", "~> 4.3.2"
+gem "jekyll-haml", "~> 0.1.6"
+gem "haml", "~> 5.2"
+gem "maruku"
+
+group :jekyll_plugins do
+  gem "jekyll-redirect-from"
+end
