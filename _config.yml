@@ -1,0 +1,39 @@
+title: Jonathan Berger
+email: jonathanpberger+public@gmail.com
+description: >-
+  Jonathan Berger is a product designer and developer who loves people, 
+  technology, and the intersection of the two.
+baseurl: ""
+url: "https://jonathanpberger.com"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-haml
+  - jekyll-redirect-from
+
+# Preserve URLs
+permalink: pretty
+
+# Collections
+collections:
+  talks:
+    output: true
+    permalink: /talks/:path/
+
+# Include these files/folders
+include:
+  - cv.pdf
+  - images
+
+# Exclude these files/folders
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .tool-versions
+  - .ruby-version
+  - Rakefile
+  - config.ru
+  - application.rb
