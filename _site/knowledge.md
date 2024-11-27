@@ -74,11 +74,28 @@
 
   - /blog -> jonathanpberger.wordpress.com
   - /cv, /resume, /resume.pdf -> /cv.pdf  
-  - /cal, /calendar, /calendly -> calendly.com/jonathanpberger
-- Jekyll redirect implementation:
-  - Use jekyll-redirect-from plugin
-  - Add redirect_from front matter to target pages
-  - For external redirects, create HTML files with meta refresh
+  - /cal, /calendar, /calendly -> calendly.com/jonathanpberger  - Jekyll redirect implementation:
+    - Use jekyll-redirect-from plugin
+    - Add redirect_from front matter to target pages
+    - For external redirects, create HTML files with meta refresh
+    - Required redirects from Rack app must be preserved:
+      - /cv -> /cv.pdf (internal file redirect)
+      - /resume -> /cv.pdf
+      - /resume.pdf -> /cv.pdf
+      - /blog -> jonathanpberger.wordpress.com (external redirect)
+      - /cal, /calendar, /calendly -> calendly.com/jonathanpberger
+    - Implementation patterns:
+      - For internal file redirects: Use redirect_to in _config.yml
+      - For external redirects: Use redirect_from plugin or meta refresh
+  - Required redirects from Rack app must be preserved:
+    - /cv -> /cv.pdf (internal file redirect)
+    - /resume -> /cv.pdf
+    - /resume.pdf -> /cv.pdf
+    - /blog -> jonathanpberger.wordpress.com (external redirect)
+    - /cal, /calendar, /calendly -> calendly.com/jonathanpberger
+  - Implementation patterns:
+    - For internal file redirects: Use redirect_to in _config.yml
+    - For external redirects: Use redirect_from plugin or meta refresh
 - Jekyll asset handling differs from Rack:
   - Assets must be in root public folder or _site directory
   - CSS/JS paths should be relative to site root

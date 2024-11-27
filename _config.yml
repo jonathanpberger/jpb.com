@@ -20,6 +20,9 @@ redirect_from:
   /cal: "https://calendly.com/jonathanpberger"
   /calendar: "https://calendly.com/jonathanpberger"
   /calendly: "https://calendly.com/jonathanpberger"
+  /cv: "/assets/docs/cv.pdf"
+  /resume: "/assets/docs/cv.pdf" 
+  /resume.pdf: "/assets/docs/cv.pdf"
   /cv: "/cv.pdf"
   /resume: "/cv.pdf" 
   /resume.pdf: "/cv.pdf"
@@ -32,8 +35,7 @@ collections:
 
 # Include these files/folders
 include:
-  - cv.pdf
-  - images
+  - assets
   - _pages
 
 # Exclude these files/folders
