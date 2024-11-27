@@ -55,7 +55,18 @@
 - Layouts go in _layouts directory
 - Include snippets go in _includes directory
 - Assets (CSS, JS, images) go in assets directory
-  - Preferred over keeping in root or public_folder
+  - Jekyll convention is to use /assets directory at project root
+  - Subdirectories like /assets/images, /assets/css, /assets/js, /assets/fonts
+  - Do not use /public_folder (Rack convention) or root-level asset directories
+  - All asset paths in HTML/CSS should be absolute from site root (e.g., /assets/images/photo.jpg)
+  - Migration from Rack:
+    - Move /css -> /assets/css
+    - Move /images -> /assets/images 
+    - Move /js -> /assets/js
+    - Move /fonts -> /assets/fonts
+    - Update all @font-face src paths in CSS to use /assets/fonts/
+    - Update all asset references to use /assets prefix
+    - Remove /public_folder after migration complete
 - Data files go in _data directory
 - Collections configured in _config.yml
   - Custom content types beyond posts/pages
@@ -103,3 +114,19 @@
   - Ensure layout files have layout: null
   - Check Jekyll plugin configuration in _config.yml
   - Variables like page and site need special handling in HAML templates
+
+## Testing Strategy
+- Use html-proofer for automated testing
+- Legacy presentation decks in public_folder should be excluded from tests
+- Focus testing on main site content:
+  - Navigation and internal links
+  - Core pages (_pages directory)
+  - Layout templates
+  - Asset references
+- External link checking can be disabled during development with `:disable_external => true`
+- Testing considerations during migration:
+  - Separate concerns between main site and legacy content
+  - Legacy presentation decks may have outdated HTML patterns
+  - Use file_ignore patterns to exclude legacy content: `%r{_site/public_folder/.*}`
+  - Image tests check both existence and accessibility (alt text)
+  - All external links should use HTTPS where possible
