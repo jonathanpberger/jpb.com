@@ -30,10 +30,53 @@
 ## Notes
 - Uses Sinatra for routing
 - Has PDF redirects for CV/resume
+- Required redirects from Rack app:
+
+## Jekyll Directory Structure
+- Content pages go in _pages directory
+  - About, events, talks, and other content pages
+  - Each page needs front matter with layout specified
+  - Convert HAML files to HTML when moving to _pages
+  - Use .html extension for all pages
+  - Add permalink in front matter to maintain URLs
+  - Must include _pages directory in config.yml includes list
+  - Example front matter:
+    ```yaml
+    ---
+    layout: default
+    title: Page Title
+    permalink: /url-path/
+    ---
+    ```
+  - Pages won't be served without both:
+    1. Correct permalink in front matter
+    2. Directory listed in config.yml includes
+- Posts go in _posts directory (dated blog posts)
+- Layouts go in _layouts directory
+- Include snippets go in _includes directory
+- Assets (CSS, JS, images) go in assets directory
+  - Preferred over keeping in root or public_folder
+- Data files go in _data directory
+- Collections configured in _config.yml
+  - Custom content types beyond posts/pages
+  - Each collection gets its own directory (e.g., _talks)
+
+  - /blog -> jonathanpberger.wordpress.com
+  - /cv, /resume, /resume.pdf -> /cv.pdf  
+  - /cal, /calendar, /calendly -> calendly.com/jonathanpberger
+- Jekyll redirect implementation:
+  - Use jekyll-redirect-from plugin
+  - Add redirect_from front matter to target pages
+  - For external redirects, create HTML files with meta refresh
 - Jekyll asset handling differs from Rack:
   - Assets must be in root public folder or _site directory
   - CSS/JS paths should be relative to site root
   - Asset pipeline differs from Rack's static file serving
+  - Font files must be in /fonts directory at root level
+  - Image paths need /images prefix from root
+  - All asset paths should start with forward slash
+  - Public folder contents should be copied to root for proper serving
+  - Links to internal pages need forward slash prefix (e.g., /events not events)
 ## Template Setup
 - Use plain HTML templates instead of HAML
 - HAML processing was attempted but abandoned due to persistent issues

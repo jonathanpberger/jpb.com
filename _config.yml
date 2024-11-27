@@ -14,6 +14,16 @@ plugins:
 # Preserve URLs
 permalink: pretty
 
+# Redirects
+redirect_from:
+  /blog: "http://jonathanpberger.wordpress.com"
+  /cal: "https://calendly.com/jonathanpberger"
+  /calendar: "https://calendly.com/jonathanpberger"
+  /calendly: "https://calendly.com/jonathanpberger"
+  /cv: "/cv.pdf"
+  /resume: "/cv.pdf" 
+  /resume.pdf: "/cv.pdf"
+
 # Collections
 collections:
   talks:
@@ -24,6 +34,7 @@ collections:
 include:
   - cv.pdf
   - images
+  - _pages
 
 # Exclude these files/folders
 exclude:
