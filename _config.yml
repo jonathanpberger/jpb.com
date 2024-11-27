@@ -9,7 +9,6 @@ url: "https://jonathanpberger.com"
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-haml
   - jekyll-redirect-from
 
 # Preserve URLs

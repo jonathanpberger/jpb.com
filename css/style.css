@@ -1,0 +1,111 @@
+
+@font-face {
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-Black.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-Regular.otf');
+}
+
+@font-face {
+  font-family: "Ars";
+  src:      url('../fonts/ARSMaquette-RegularItalic.otf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ars";
+  src: url('../fonts/ARSMaquette-BlackItalic.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body
+{
+  font-family: "Ars", Georgia, "Times New Roman", Times, serif;
+  font-size: 2em;
+  line-height: 1em;
+  background-color: #333;
+  color: #eee;
+  background-color: #eee;
+  color: #333;
+}
+
+#home h1 {
+  /* font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'BioRhyme Expanded', serif;
+  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: Helvetica, "Helvetica Neue", sans-serif; */
+  font-family: "Ars", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size:1em;
+  border-bottom: 3px solid;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-weight:normal;
+  font-size: 0.6em;
+  line-height: 1.5em;
+}
+
+a {
+  /*font-weight: bold;*/
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: inherit;
+}
+
+a:hover {
+  background: yellow;
+  color: black;
+  border-bottom: 1px solid yellow;
+}
+
+.left {
+  float: left;
+}
+
+#home div.col {
+  display:block;
+  width: 260px;
+  margin: 5px;
+  padding: 0 20px;
+  float: left;
+}
+
+.code-management {
+  line-height: 28px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+dl {
+  margin-left: 25px;
+
+}
+
+dt {
+  float: left;
+  margin-right: 25px;
+  width: 425px;
+}
+
+dt {
+  float: left;
+  clear: right;
+}
+
+/*.third {
+  width: 32%;
+  float: left;
+}
+*/
