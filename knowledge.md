@@ -64,8 +64,19 @@
       - Handle submodules separately from regular files
       - Prefer cleaning Git references over deleting content
 - GitHub Pages compatibility requirements:
-  - Use only GitHub-supported plugins
-  - Avoid custom plugins like jekyll-haml
+  - Two deployment options:
+    1. Default GitHub Pages build:
+      - Must use github-pages gem
+      - Restricted to specific gem versions
+      - Limited to whitelisted plugins only
+      - Cannot override environment settings
+    2. GitHub Actions build (preferred):
+      - Full control over dependencies
+      - Can use any Jekyll version
+      - Supports all plugins
+      - Still runs in production environment
+  - Use only GitHub-supported plugins if using default build
+  - Avoid custom plugins like jekyll-haml unless using Actions
   - Test builds locally with same environment as GitHub Pages
   - Asset paths must include baseurl when site is not at root
   - Configure baseurl in _config.yml for project pages
@@ -105,6 +116,10 @@
 - Jekyll loads configuration in this order:
   1. Default settings (top level in _config.yml)
   2. Environment-specific settings (under environment names)
+  3. Important: Default settings override environment settings if both exist
+     - Remove top-level baseurl/url if using environment configs
+     - Only define defaults if they apply to all environments
+     - Debug with /info page to verify correct values
 - Default baseurl/url provide fallback values
 - Environment settings override defaults when JEKYLL_ENV is set
 - Use debug page (/info) to verify environment configuration

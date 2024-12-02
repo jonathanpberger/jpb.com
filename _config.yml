@@ -4,9 +4,9 @@ description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
 
-# Default env
-baseurl: ""
-url: "https://localhost:4000"
+# Default env - use production values since GitHub Pages always uses JEKYLL_ENV=production
+baseurl: "/jpb.com"
+url: "https://jonathanpberger.github.io"
 
 # Environment-specific settings
 development:
