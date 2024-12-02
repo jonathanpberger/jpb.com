@@ -42,9 +42,6 @@ exclude:
   - node_modules
   - vendor
   - .tool-versions
-  - .ruby-version
   - Rakefile
-  - config.ru
-  - application.rb
   - knowledge.md
   - public_folder
