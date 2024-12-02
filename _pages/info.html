@@ -1,0 +1,41 @@
+---
+layout: default
+title: Site Info
+permalink: /info/
+---
+
+{% capture empty_default %}| default: 'FOOOOOO (empty)'{% endcapture %}
+
+<div class="debug-info">
+  <h1>Jekyll Site Variables</h1>
+  
+  <hr />
+
+  <h2>Environment</h2>
+    <dl>
+      <dt>JEKYLL_ENV:</dt>                      <dd>{{ jekyll.environment }}</dd>
+    </dl>
+
+  <h2>URLs</h2>
+
+  <dl>
+    <dt>0. site.url:                         </dt>  <dd>{{ site.url | default: 'EMPTY STRING'}}                         </dd>
+    <dt>1. site.baseurl:                     </dt>  <dd>{{ site.baseurl | default: 'EMPTY STRING'}}                     </dd>
+    <dt>2. site[jekyll.environment].url:     </dt>  <dd>{{ site[jekyll.environment].url | default: 'EMPTY STRING'}}     </dd>
+    <dt>3. site[jekyll.environment].baseurl: </dt>  <dd>{{ site[jekyll.environment].baseurl | default: 'EMPTY STRING' }} </dd>
+  </dl>
+
+  <h2>Example Paths</h2>
+  <dl>
+    <dt>CV path:</dt>                           <dd> {{ site.baseurl }}/cv.pdf</dd>
+    <dt>CV path (env):</dt>                     <dd> {{ site[jekyll.environment].baseurl }}/cv.pdf</dd>
+  </dl>
+
+  <h2>Page Variables</h2>
+
+  <dl>
+    <dt>page.url: </dt>                         <dd>{{ page.url }}</dd>
+    <dt>page.path:</dt>                         <dd>{{ page.path }}</dd>
+  </dl>
+
+</div>

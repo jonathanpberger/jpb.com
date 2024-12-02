@@ -98,18 +98,37 @@
 - External redirects (blog, calendar) need custom handling
 
 ## Environment Configuration
-- Use `site[jekyll.environment].baseurl` consistently for all asset/link paths
-- Never use raw `site.baseurl` - it doesn't handle environments correctly
+- Jekyll loads configuration in this order:
+  1. Default settings (top level in _config.yml)
+  2. Environment-specific settings (under environment names)
+- Default baseurl/url provide fallback values
+- Environment settings override defaults when JEKYLL_ENV is set
+- Use debug page (/info) to verify environment configuration
+- Common environment issues:
+  - Incorrect JEKYLL_ENV setting
+  - Missing environment-specific config
+  - Default values overriding environment settings
+- Three environments supported:
+  - Development: Local development (JEKYLL_ENV=development)
+  - Staging: GitHub Pages testing (JEKYLL_ENV=staging)
+  - Production: Live site (JEKYLL_ENV=production)
 - Environment-specific settings configured in _config.yml:
   ```yaml
   development:
     baseurl: ""
     url: "https://localhost:4000"
+  staging:
+    baseurl: "/jpb.com"  # for GitHub Pages project site
+    url: "https://jonathanpberger.github.io"
   production:
     baseurl: "/jpb.com"  # for GitHub Pages project site
     url: "https://jonathanpberger.github.io"
   ```
 - Access via: `{{ site[jekyll.environment].baseurl }}`
+- Debug environment issues:
+  - Check JEKYLL_ENV is set correctly
+  - Verify all asset/link paths use site[jekyll.environment].baseurl
+  - Create debug page to show Jekyll variables if needed
 - Common places to check:
   - Image src attributes
   - Asset paths (CSS, JS)

@@ -3,16 +3,20 @@ email: jonathanpberger+public@gmail.com
 description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
-# URL configuration
-baseurl: ""  # Empty for development
-url: "https://localhost:4000"  # default for development
+
+# Default env
+baseurl: ""
+url: "https://localhost:4000"
 
 # Environment-specific settings
 development:
   baseurl: ""
   url: "https://localhost:4000"
+staging:
+  baseurl: "/jpb.com" # for GitHub Pages project site
+  url: "https://jonathanpberger.github.io"
 production:
-  baseurl: "/jpb.com"  # for GitHub Pages project site
+  baseurl: "/jpb.com" # for GitHub Pages project site
   url: "https://jonathanpberger.github.io"
 
 # These will be used when we move to custom domain

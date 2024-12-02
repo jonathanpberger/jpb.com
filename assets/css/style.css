@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Ars";
   src: url('../fonts/ARSMaquette-Black.otf');
@@ -12,19 +11,18 @@
 
 @font-face {
   font-family: "Ars";
-  src:      url('../fonts/ARSMaquette-RegularItalic.otf');
+  src: url('../fonts/ARSMaquette-RegularItalic.otf');
   font-style: italic;
 }
 
 @font-face {
   font-family: "Ars";
   src: url('../fonts/ARSMaquette-BlackItalic.otf');
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
-body
-{
+body {
   font-family: "Ars", Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
   line-height: 1em;
@@ -42,7 +40,7 @@ body
   font-family: Helvetica, "Helvetica Neue", sans-serif; */
   font-family: "Ars", Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size:1em;
+  font-size: 1em;
   border-bottom: 3px solid;
   padding-bottom: 25px;
   text-transform: uppercase;
@@ -51,7 +49,7 @@ body
 p {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Merriweather', serif;
-  font-weight:normal;
+  font-weight: normal;
   font-size: 0.6em;
   line-height: 1.5em;
 }
@@ -74,7 +72,7 @@ a:hover {
 }
 
 #home div.col {
-  display:block;
+  display: block;
   width: 260px;
   margin: 5px;
   padding: 0 20px;
@@ -109,3 +107,52 @@ dt {
   float: left;
 }
 */
+
+.debug-info {
+  background-color: white;
+  padding: 20px;
+  font-family: monospace;
+}
+
+.debug-info dt {
+  color: grey;
+}
+
+/* .debug-info dl {
+  margin: 0;
+}
+
+
+.debug-info dd {
+  margin: 0 0 0 320px;
+  padding: 0 0 0.5em 0;
+}
+
+.debug-info hr {
+  margin: 20px 0;
+} */
+
+.debug-info {
+  background-color: white;
+  padding: 20px;
+  font-family: monospace;
+}
+
+.debug-info dt {
+  color: grey;
+  font-size: 0.7em;
+}
+
+/* .debug-info dl {
+  margin: 0;
+}
+
+
+.debug-info dd {
+  margin: 0 0 0 320px;
+  padding: 0 0 0.5em 0;
+}
+
+.debug-info hr {
+  margin: 20px 0;
+} */
