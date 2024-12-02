@@ -3,17 +3,22 @@ email: jonathanpberger+public@gmail.com
 description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
-# URL configuration - uses environments to switch between local/staging/prod
-baseurl: ""  # default for development
-url: "http://localhost:4000"  # default for development
+# URL configuration
+baseurl: ""  # Empty for development
+url: "https://localhost:4000"  # default for development
 
-staging:
-  baseurl: "/jpb.com"
+# Environment-specific settings
+development:
+  baseurl: ""
+  url: "https://localhost:4000"
+production:
+  baseurl: "/jpb.com"  # for GitHub Pages project site
   url: "https://jonathanpberger.github.io"
 
-production:
-  baseurl: ""
-  url: "https://jonathanpberger.com"
+# These will be used when we move to custom domain
+# production:
+#   baseurl: ""
+#   url: "https://jonathanpberger.com"
 
 # Build settings
 markdown: kramdown
@@ -25,7 +30,7 @@ permalink: pretty
 
 # Redirects
 redirect_from:
-  /blog: "http://jonathanpberger.wordpress.com"
+  /blog: "https://jonathanpberger.wordpress.com"
   /cal: "https://calendly.com/jonathanpberger"
   /calendar: "https://calendly.com/jonathanpberger"
   /calendly: "https://calendly.com/jonathanpberger"

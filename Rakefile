@@ -19,8 +19,28 @@ task :test do
   HTMLProofer.check_directory("./_site", options).run
 end
 
+# Serve tasks
+task :s => :serve
+# Serve tasks
+task :s => :serve
 task :serve do
+  sh "pkill -f jekyll || true"  # Kill existing jekyll processes, don't error if none
   sh "bundle exec jekyll serve"
+end
+
+# Deploy tasks
+task :deploy, [:env] do |t, args|
+  env = args[:env] || "staging"
+  case env
+  when "staging"
+    sh "bundle exec jekyll build"
+    sh "git push origin HEAD:gh-pages"
+  when "prod"
+    sh "bundle exec jekyll build"
+    sh "git push origin HEAD:production"
+  else
+    puts "Invalid environment. Use 'staging' or 'prod'"
+  end
 end
 
 task :default => [:serve]

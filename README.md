@@ -1,15 +1,29 @@
 # Starting:
 
-`jekyll serve`
+`rake serve` or `rake s`
 
 # Visiting
 
 https://jonathanpberger.github.io/jpb.com/
 
 
-# Deploy to gh-pages
-- `git push origin [BRANCH]:gh-pages`
-- check deployment: https://github.com/jonathanpberger/jpb.com/actions/
+# Deployment
+
+## Local Development
+```shell
+rake serve  # or rake s
+```
+
+## Deploy to GitHub Pages
+```shell
+rake deploy  # or rake deploy[staging]
+```
+
+The site will be available at: https://jonathanpberger.github.io/jpb.com/
+
+Check deployment status at: https://github.com/jonathanpberger/jpb.com/actions/
+
+The site will be available at: https://jonathanpberger.github.io/jpb.com/
 
 ---
 

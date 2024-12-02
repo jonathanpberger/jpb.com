@@ -27,9 +27,28 @@
 - Deployment strategy:
   - Use Jekyll environments to manage different configurations:
     - Development (default): `JEKYLL_ENV=development bundle exec jekyll serve`
-    - Staging: `JEKYLL_ENV=staging bundle exec jekyll build`
+    - Staging: GitHub Pages always uses `JEKYLL_ENV=production`
     - Production: `JEKYLL_ENV=production bundle exec jekyll build`
   - Configuration in _config.yml uses environment-specific settings
+  - GitHub Pages specific requirements:
+    - Always runs in production environment
+    - Cannot override JEKYLL_ENV
+    - Configure environment-specific settings in _config.yml under environment names
+    - Access settings with site[jekyll.environment].baseurl syntax
+    - All asset paths must include baseurl for project pages
+  - Use Rake tasks for consistent workflow:
+    - `rake serve` or `rake s`: Run local development server
+    - `rake deploy`: Deploy to staging (GitHub Pages)
+    - `rake deploy prod`: Deploy to production (future)
+  - All commands should use appropriate Jekyll environment
+  - Never use raw Jekyll commands directly
+  - Always use rake tasks for:
+    - Local development
+    - Building
+    - Deployment
+    - Testing
+  - This ensures consistent behavior and proper environment setup
+  - All URLs should use HTTPS where possible
   - No need to modify _config.yml between environments
   - Asset paths automatically adjust based on environment
   - Important: Jekyll's exclude in _config.yml only affects build process
@@ -208,3 +227,4 @@
   - Use file_ignore patterns to exclude legacy content: `%r{_site/public_folder/.*}`
   - Image tests check both existence and accessibility (alt text)
   - All external links should use HTTPS where possible
+```
