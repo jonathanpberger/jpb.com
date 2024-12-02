@@ -46,3 +46,6 @@ exclude:
   - Rakefile
   - config.ru
   - application.rb
+  - knowledge.md
+
+
