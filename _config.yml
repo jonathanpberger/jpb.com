@@ -32,22 +32,6 @@ plugins:
 # Preserve URLs
 permalink: pretty
 
-# Redirects
-redirect_from:
-  /blog: "https://jonathanpberger.wordpress.com"
-  /cal: "https://calendly.com/jonathanpberger"
-  /calendar: "https://calendly.com/jonathanpberger"
-  /calendly: "https://calendly.com/jonathanpberger"
-  /cv: "/cv.pdf"
-  /resume: "/cv.pdf"
-  /resume.pdf: "/cv.pdf"
-
-# Collections
-collections:
-  talks:
-    output: true
-    permalink: /talks/:path/
-
 # Include these files/folders
 include:
   - assets
