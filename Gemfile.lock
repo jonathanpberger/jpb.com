@@ -7,7 +7,7 @@ GEM
     maruku (0.7.3)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
-    rack (2.2.3)
+    rack (2.2.8.1)
     rack-protection (2.2.2)
       rack
     rake (13.0.1)
