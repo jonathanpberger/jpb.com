@@ -21,16 +21,16 @@ Jonathan Berger, Pivotal Labs
 
 ---
 
-![movember](http://www.jonathanpberger.com/agile-ux-illustrator/images/mo.jpg)
-<http://mobro.co/jonathanpberger>
+![movember](https://www.jonathanpberger.com/agile-ux-illustrator/images/mo.jpg)
+<https://mobro.co/jonathanpberger>
 
 ---
 
 ## What do I do?
 
-- • I'm an entrepreneur with a fashion startup called <http://marketpublique.com>
-- • I'm a designer and developer who builds products every day at <http://pivotallabs.com>
-- • I occasionally speak and blog and post all that at <http://jonathanpberger.com>
+- • I'm an entrepreneur with a fashion startup called <https://marketpublique.com>
+- • I'm a designer and developer who builds products every day at <https://pivotallabs.com>
+- • I occasionally speak and blog and post all that at <https://jonathanpberger.com>
 
 ---
 ## Who are you?
@@ -191,7 +191,7 @@ I started as
 # a self-taught designer
 
 ---
-I worked on [Spot.Us](http://spot.us) and
+I worked on [Spot.Us](https://spot.us) and
 # found Agile and fell in love.
 
 ---
@@ -229,7 +229,7 @@ In order of
 
 ## HTML looks like this
 
-`<a class="on-sale" href="http://hamazon.com">Shop at Hamazon!</a>`
+`<a class="on-sale" href="https://hamazon.com">Shop at Hamazon!</a>`
 
 ---
 
@@ -247,7 +247,7 @@ In order of
 
 ---
 ## Learn
-# [Markdown](http://daringfireball.net/projects/markdown/syntax)
+# [Markdown](https://daringfireball.net/projects/markdown/syntax)
 
 And use it for **everything.**
 
@@ -256,7 +256,7 @@ And use it for **everything.**
 ## TDD and Story Writing
 using Cucumber. Write stories at the right size.
 
-(See my post [Writing Well-Formed Stories](http://pivotallabs.com/users/jonathanpberger/blog/articles/2333-how-to-write-well-formed-stories) for more.)
+(See my post [Writing Well-Formed Stories](https://pivotallabs.com/users/jonathanpberger/blog/articles/2333-how-to-write-well-formed-stories) for more.)
 
 ---
 
@@ -331,30 +331,30 @@ Learn Something! Learn a little HTML! And CSS! Get your hands dirty!
 
 ---
 ## Courses
-- <http://CodeYear.com>
-- <http://codecademy.com/>
-- <http://codeschool.com/>
-- <http://lynda.com>
-- <http://Railstutorial.org>
+- <https://CodeYear.com>
+- <https://codecademy.com/>
+- <https://codeschool.com/>
+- <https://lynda.com>
+- <https://Railstutorial.org>
 
 ---
 ## Resources
-- <http://stackoverflow.com>
-- <http://forrst.com>
+- <https://stackoverflow.com>
+- <https://forrst.com>
 
 ---
 ## Thanks!
 > Find me at
-<http://jonathanpberger.com>,
+<https://jonathanpberger.com>,
 <jonathanpberger@gmail.com>,
-[@jonathanpberger](http://jonathanpberger.com) on [twitter](http://twitter.com/jonathanpberger), [github](http://github.com/jonathanpberger), [forrst](http://forrst.com/jonathanpberger), [flickr](http://flickr.com/photos/jonathanpberger), etc. etc. etc.
+[@jonathanpberger](https://jonathanpberger.com) on [twitter](https://twitter.com/jonathanpberger), [github](https://github.com/jonathanpberger), [forrst](https://forrst.com/jonathanpberger), [flickr](https://flickr.com/photos/jonathanpberger), etc. etc. etc.
 
 ## Donate to my mustache at
-<http://mobro.co/jonathanpberger>
+<https://mobro.co/jonathanpberger>
 
 
 ## Find this deck in HTML (with links)
-> <http://jonathanpberger.com/talks>
+> <https://jonathanpberger.com/talks>
 
 ---
 # Bonus Level!
@@ -378,7 +378,7 @@ Wherein I try to show examples if there's time.
 
 ---
 ## Pair Programming + The Pivotal Way
-<http://bit.ly/conceptsofpivotaltracker>
+<https://bit.ly/conceptsofpivotaltracker>
 
 ---
 ## Making is good for projects

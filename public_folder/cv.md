@@ -58,10 +58,10 @@ Organizer or co-organizer of events like the Balanced Team, Agile Experience Des
 # PUBLIC SPEAKING
 Jonathan is an internationally-sought speaker who talks about startups, design, and technology at events like the Mobile Central Europe Conference, LeanUX NYC, Agile UX NYC, Agile Alliance, Future of Web Design, O’Reilly’s Web 2.0 Expo, New York Tech Meetup, Fashion 2.0 Startup Showcase, Startup Weekend, North Brooklyn Breakfast Club, The Product Group, and others.
 
-Portfolio of talks at http://www.jonathanpberger.com/talks.
+Portfolio of talks at https://www.jonathanpberger.com/talks.
 
 # WORK SAMPLES, & REFERENCES
-Portfolio of talks at http://www.jonathanpberger.com/talks, writings at jonathanpberger.com/blog, and references & portfolio available upon request. Code lives at http://github.com/jonathanpberger.
+Portfolio of talks at https://www.jonathanpberger.com/talks, writings at jonathanpberger.com/blog, and references & portfolio available upon request. Code lives at https://github.com/jonathanpberger.
 
 
 

@@ -346,5 +346,5 @@ Design solutions
 # Thank You.
 
 - @jonathanpberger on twitter, github, gmail, pivotallabs.com, everywhere.
-- slides at <http://jonathanpberger.com/talks>
+- slides at <https://jonathanpberger.com/talks>
 - Thanks to Lane Halley and Giff Constable for feedback on this talk.
