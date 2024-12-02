@@ -4,6 +4,15 @@
 - Convert Rack app to Jekyll for GitHub Pages deployment
 - Preserve HAML usage
 - Keep existing Markdown content
+  - Production: jonathanpberger.com (future)
+  - Use Jekyll environments to manage different configurations:
+    - Development: JEKYLL_ENV=development (local)
+    - Staging: JEKYLL_ENV=staging (github.io)
+    - Production: JEKYLL_ENV=production (custom domain)
+  - Configure baseurl and other environment-specific settings in _config/{env}.yml
+  - Never manually edit baseurl in _config.yml
+  - Run locally with: JEKYLL_ENV=development bundle exec jekyll serve
+  - Deploy to staging with: JEKYLL_ENV=staging bundle exec jekyll build
 - Maintain current styling
 - Keep current routing/URLs working
 
@@ -13,14 +22,16 @@
 - Maintain redirects (blog, calendar, etc)
 - Deployment environments:
   - Staging: jonathanpberger.github.io/jpb.com
-  - Production: jonathanpberger.com (future)
   - Keep baseurl configured for staging
   - Asset paths must work in both environments
 - Deployment strategy:
-  - Staging: jonathanpberger.github.io/jpb.com
-  - Production: jonathanpberger.com (future)
-  - Keep baseurl configured for staging
-  - Asset paths must work in both environments
+  - Use Jekyll environments to manage different configurations:
+    - Development (default): `JEKYLL_ENV=development bundle exec jekyll serve`
+    - Staging: `JEKYLL_ENV=staging bundle exec jekyll build`
+    - Production: `JEKYLL_ENV=production bundle exec jekyll build`
+  - Configuration in _config.yml uses environment-specific settings
+  - No need to modify _config.yml between environments
+  - Asset paths automatically adjust based on environment
   - Important: Jekyll's exclude in _config.yml only affects build process
     - Git operations (like submodules) are not affected by Jekyll excludes
     - Must handle Git cleanup separately from Jekyll configuration

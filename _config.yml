@@ -3,8 +3,17 @@ email: jonathanpberger+public@gmail.com
 description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
-baseurl: "/jpb.com"  # for staging at jonathanpberger.github.io/jpb.com
-url: "https://jonathanpberger.github.io"  # staging URL
+# URL configuration - uses environments to switch between local/staging/prod
+baseurl: ""  # default for development
+url: "http://localhost:4000"  # default for development
+
+staging:
+  baseurl: "/jpb.com"
+  url: "https://jonathanpberger.github.io"
+
+production:
+  baseurl: ""
+  url: "https://jonathanpberger.com"
 
 # Build settings
 markdown: kramdown
