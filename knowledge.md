@@ -8,9 +8,13 @@
 - Keep current routing/URLs working
 
 ## Technical Requirements
-- Use Jekyll with HAML plugin
+- Avoid non-standard Jekyll plugins that aren't supported by GitHub Pages
 - Preserve all current routes from application.rb
 - Maintain redirects (blog, calendar, etc)
+- GitHub Pages compatibility requirements:
+  - Use only GitHub-supported plugins
+  - Avoid custom plugins like jekyll-haml
+  - Test builds locally with same environment as GitHub Pages
 - Ruby version selection criteria:
   - Check EOL dates when selecting versions
   - Prefer versions with longer support windows
@@ -67,6 +71,14 @@
   - Subdirectories like /assets/images, /assets/css, /assets/js, /assets/fonts
   - Do not use /public_folder (Rack convention) or root-level asset directories
   - All asset paths in HTML/CSS should be absolute from site root (e.g., /assets/images/photo.jpg)
+  - Important: Jekyll's exclude in _config.yml only affects build process
+    - Git operations (like submodules) are not affected by Jekyll excludes
+    - Must handle Git cleanup separately from Jekyll configuration
+    - When removing legacy content:
+      - Jekyll exclude prevents files from being built/copied to _site
+      - Git still tracks excluded files until explicitly untracked
+      - Handle submodules separately from regular files
+      - Prefer cleaning Git references over deleting content
   - Migration from Rack:
     - Move /css -> /assets/css
     - Move /images -> /assets/images 
