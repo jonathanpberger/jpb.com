@@ -25,14 +25,18 @@
   - Keep baseurl configured for staging
   - Asset paths must work in both environments
 - Deployment strategy:
-  - Use Jekyll environments to manage different configurations:
-    - Development (default): `JEKYLL_ENV=development bundle exec jekyll serve`
     - Staging: GitHub Pages always uses `JEKYLL_ENV=production`
     - Production: `JEKYLL_ENV=production bundle exec jekyll build`
   - Configuration in _config.yml uses environment-specific settings
   - GitHub Pages specific requirements:
-    - Always runs in production environment
-    - Cannot override JEKYLL_ENV
+    - Always runs in production environment (JEKYLL_ENV=production)
+    - Cannot override JEKYLL_ENV via config
+    - Must explicitly set JEKYLL_ENV in deployment scripts if different environment is needed
+  - Use Jekyll environments to manage different configurations:
+    - Development (default): `JEKYLL_ENV=development bundle exec jekyll serve`
+    - Always runs in production environment (JEKYLL_ENV=production)
+    - Cannot override JEKYLL_ENV on GitHub Pages
+    - Our "staging" deployment still uses production environment
     - Configure environment-specific settings in _config.yml under environment names
     - Access settings with site[jekyll.environment].baseurl syntax
     - All asset paths must include baseurl for project pages
@@ -104,6 +108,14 @@
 - Default baseurl/url provide fallback values
 - Environment settings override defaults when JEKYLL_ENV is set
 - Use debug page (/info) to verify environment configuration
+- DRY Principles:
+  - Avoid scattering `site[jekyll.environment]` throughout templates
+  - Prefer centralizing environment-specific logic in layouts or includes
+  - Consider creating custom Jekyll plugins or Liquid includes for environment handling
+- DRY Principles:
+  - Avoid scattering `site[jekyll.environment]` throughout templates
+  - Prefer centralizing environment-specific logic in layouts or includes
+  - Consider creating custom Jekyll plugins or Liquid includes for environment handling
 - Common environment issues:
   - Incorrect JEKYLL_ENV setting
   - Missing environment-specific config

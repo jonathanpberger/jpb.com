@@ -38,12 +38,15 @@ task :deploy, [:env] do |t, args|
   env = args[:env] || "staging"
   case env
   when "staging"
-    sh "bundle exec jekyll build"
+    # GitHub Pages always uses JEKYLL_ENV=production
+    sh "JEKYLL_ENV=production bundle exec jekyll build"
     sh "git push origin HEAD:gh-pages"
     sh "open https://github.com/jonathanpberger/jpb.com/actions/"
   when "prod"
-    sh "bundle exec jekyll build"
-    sh "git push origin HEAD:production"
+    # GitHub Pages always uses JEKYLL_ENV=production
+    sh "JEKYLL_ENV=production bundle exec jekyll build"
+    sh "git push origin HEAD:gh-pages"
+    sh "open https://github.com/jonathanpberger/jpb.com/actions/"
   else
     puts "Invalid environment. Use 'staging' or 'prod'"
   end
