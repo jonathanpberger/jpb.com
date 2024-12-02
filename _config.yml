@@ -47,5 +47,4 @@ exclude:
   - config.ru
   - application.rb
   - knowledge.md
-
-
+  - public_folder
