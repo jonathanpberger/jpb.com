@@ -97,6 +97,26 @@
 - CV and similar document routes should point directly to files via config
 - External redirects (blog, calendar) need custom handling
 
+## Environment Configuration
+- Use `site[jekyll.environment].baseurl` consistently for all asset/link paths
+- Never use raw `site.baseurl` - it doesn't handle environments correctly
+- Environment-specific settings configured in _config.yml:
+  ```yaml
+  development:
+    baseurl: ""
+    url: "https://localhost:4000"
+  production:
+    baseurl: "/jpb.com"  # for GitHub Pages project site
+    url: "https://jonathanpberger.github.io"
+  ```
+- Access via: `{{ site[jekyll.environment].baseurl }}`
+- Common places to check:
+  - Image src attributes
+  - Asset paths (CSS, JS)
+  - Internal links
+  - Redirects
+  - PDF/document links
+
 ## Jekyll Directory Structure
 - Content pages go in _pages directory
   - About, events, talks, and other content pages
