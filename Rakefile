@@ -2,7 +2,7 @@ require 'html-proofer'
 
 task :test do
   sh "bundle exec jekyll build"
-  options = { 
+  options = {
     :assume_extension => true,
     :allow_hash_href => true,
     :check_favicon => true,
@@ -17,6 +17,11 @@ task :test do
     ]
   }
   HTMLProofer.check_directory("./_site", options).run
+end
+
+
+task :visit do
+  sh "open https://jonathanpberger.github.io/jpb.com"
 end
 
 # Serve tasks
@@ -35,6 +40,7 @@ task :deploy, [:env] do |t, args|
   when "staging"
     sh "bundle exec jekyll build"
     sh "git push origin HEAD:gh-pages"
+    sh "open https://github.com/jonathanpberger/jpb.com/actions/"
   when "prod"
     sh "bundle exec jekyll build"
     sh "git push origin HEAD:production"
