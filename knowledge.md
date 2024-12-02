@@ -17,10 +17,18 @@
   - Keep baseurl configured for staging
   - Asset paths must work in both environments
 - Deployment strategy:
-  - Current: GitHub Pages at jonathanpberger.github.io/jpb.com
-  - Target: jonathanpberger.com
-  - Avoid hardcoding temporary jpb.com paths
-  - Design asset paths and redirects for eventual domain migration
+  - Staging: jonathanpberger.github.io/jpb.com
+  - Production: jonathanpberger.com (future)
+  - Keep baseurl configured for staging
+  - Asset paths must work in both environments
+  - Important: Jekyll's exclude in _config.yml only affects build process
+    - Git operations (like submodules) are not affected by Jekyll excludes
+    - Must handle Git cleanup separately from Jekyll configuration
+    - When removing legacy content:
+      - Jekyll exclude prevents files from being built/copied to _site
+      - Git still tracks excluded files until explicitly untracked
+      - Handle submodules separately from regular files
+      - Prefer cleaning Git references over deleting content
 - GitHub Pages compatibility requirements:
   - Use only GitHub-supported plugins
   - Avoid custom plugins like jekyll-haml
@@ -140,6 +148,13 @@
   - All asset paths should start with forward slash
   - Public folder contents should be copied to root for proper serving
   - Links to internal pages need forward slash prefix (e.g., /events not events)
+  - All asset and internal link paths must use site.baseurl prefix for proper staging/production support
+  - Common paths to check:
+    - Image src attributes
+    - CSS/JS file includes
+    - Internal page links
+    - Font file paths
+    - PDF and document links
 ## Template Setup
 - Use plain HTML templates instead of HAML
 - HAML processing was attempted but abandoned due to persistent issues

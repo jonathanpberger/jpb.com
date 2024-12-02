@@ -9,7 +9,7 @@ https://jonathanpberger.github.io/jpb.com/
 
 # Deploy to gh-pages
 - `git push origin [BRANCH]:gh-pages`
-
+- check deployment: https://github.com/jonathanpberger/jpb.com/actions/
 
 ---
 
