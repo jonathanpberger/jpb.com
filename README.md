@@ -1,6 +1,6 @@
 # Starting:
 
-`$ rackup config.ru`
+`jekyll serve`
 
 # Deploy to gh-pages
 - `git checkout gh-pages`
@@ -14,16 +14,16 @@
 
 ## Talks page
 - [x] add favorited tweets from conf. praise
+- [x] move talks to gh-pages
 - [] add UX holiday party
 - [] create logo salad for events
-- [] move talks to gh-pages
 - [] convert talks to PDF, add to speakerdeck
 - [] move old talks to remark.js
 - [] add Polish MCE panel to talks
 
 # Scratch
 
-Polish MCE panel to be added to talks
+## Polish MCE panel to be added to /talks
 
 https://www.youtube.com/watch?v=rQOYH_hJG5Y
 
