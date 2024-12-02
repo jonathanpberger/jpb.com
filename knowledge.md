@@ -11,10 +11,25 @@
 - Avoid non-standard Jekyll plugins that aren't supported by GitHub Pages
 - Preserve all current routes from application.rb
 - Maintain redirects (blog, calendar, etc)
+- Deployment environments:
+  - Staging: jonathanpberger.github.io/jpb.com
+  - Production: jonathanpberger.com (future)
+  - Keep baseurl configured for staging
+  - Asset paths must work in both environments
+- Deployment strategy:
+  - Current: GitHub Pages at jonathanpberger.github.io/jpb.com
+  - Target: jonathanpberger.com
+  - Avoid hardcoding temporary jpb.com paths
+  - Design asset paths and redirects for eventual domain migration
 - GitHub Pages compatibility requirements:
   - Use only GitHub-supported plugins
   - Avoid custom plugins like jekyll-haml
   - Test builds locally with same environment as GitHub Pages
+  - Asset paths must include baseurl when site is not at root
+  - Configure baseurl in _config.yml for project pages
+  - Test asset paths with both local Jekyll serve and GitHub Pages URL
+  - Use relative paths (./assets/*) instead of absolute paths (/assets/*) for GitHub Pages project sites
+  - Relative paths work better than absolute paths with repository prefixes
 - Ruby version selection criteria:
   - Check EOL dates when selecting versions
   - Prefer versions with longer support windows

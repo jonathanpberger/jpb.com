@@ -3,8 +3,8 @@ email: jonathanpberger+public@gmail.com
 description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
-baseurl: ""
-url: "https://jonathanpberger.com"
+baseurl: "/jpb.com"  # for staging at jonathanpberger.github.io/jpb.com
+url: "https://jonathanpberger.github.io"  # staging URL
 
 # Build settings
 markdown: kramdown

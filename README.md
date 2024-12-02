@@ -2,9 +2,13 @@
 
 `jekyll serve`
 
+# Visiting
+
+https://jonathanpberger.github.io/jpb.com/
+
+
 # Deploy to gh-pages
-- `git checkout gh-pages`
-- `git merge`
+- `git push origin [BRANCH]:gh-pages`
 
 
 ---
