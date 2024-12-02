@@ -30,3 +30,12 @@
 ## Notes
 - Uses Sinatra for routing
 - Has PDF redirects for CV/resume
+- Required redirects from Rack app:
+
+## Routing & Redirects
+- Prefer configuration-based routing over Jekyll's redirect-from gem
+- Never use HTML stub files for redirects
+- Use _config.yml permalinks and redirect_to for all routing
+- Do not use Jekyll's frontmatter-based redirects
+- CV and similar document routes should point directly to files via config
+- External redirects (blog, calendar) need custom handling
