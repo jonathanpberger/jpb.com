@@ -1,6 +1,0 @@
-@media print {
-    @page {
-        size: letter landscape;
-        margin: 4.0cm;
-    }
-}

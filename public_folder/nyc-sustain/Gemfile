@@ -1,2 +1,0 @@
-gem 'mdpress'
-gem 'rake'
