@@ -8,10 +8,10 @@ description: >-
 baseurl: "/jpb.com"
 url: "https://jonathanpberger.github.io"
 
-# These will be used when we move to custom domain
-# production:
-#   baseurl: ""
-#   url: "https://jonathanpberger.com"
+# Production settings for custom domain
+production:
+  baseurl: ""
+  url: "https://jonathanpberger.com"
 
 # Build settings
 markdown: kramdown

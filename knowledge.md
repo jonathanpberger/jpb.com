@@ -161,9 +161,42 @@
   staging:
     baseurl: "/jpb.com"  # for GitHub Pages project site
     url: "https://jonathanpberger.github.io"
-  production:
-    baseurl: "/jpb.com"  # for GitHub Pages project site
-    url: "https://jonathanpberger.github.io"
+# Custom Domain Setup
+When moving from GitHub Pages (jonathanpberger.github.io/jpb.com) to custom domain (jonathanpberger.com):
+
+1. Update _config.yml production settings:
+```yml
+production:
+  baseurl: ""
+  url: "https://jonathanpberger.com"
+```
+
+2. Configure GitHub Pages:
+   - Go to repo Settings > Pages
+   - Under "Custom domain" enter: jonathanpberger.com
+   - Enable "Enforce HTTPS"
+   - Wait for SSL certificate (may take up to 24 hours)
+
+3. Configure GoDaddy DNS:
+   - Add CNAME record:
+     - Host: @ or www
+     - Points to: jonathanpberger.github.io
+   - Add A records for GitHub Pages IPs:
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+   - TTL: 600 seconds or lowest available
+   - DNS propagation may take 24-48 hours
+
+4. Verify Setup:
+   - Check DNS propagation: https://www.whatsmydns.net
+   - Verify HTTPS certificate active
+   - Test both www and apex domain
+
+production:
+  baseurl: ""
+  url: "https://jonathanpberger.com"
   ```
 - Access via: `{{ site[jekyll.environment].baseurl }}`
 - Debug environment issues:
