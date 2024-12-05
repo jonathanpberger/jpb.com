@@ -6,6 +6,10 @@ permalink: /info/
 
 <div class="debug-info">
   <h1>Jekyll Site Variables</h1>
+  <h2>
+    Git SHA: {% capture sha %}{% include GIT_SHA %}{% endcapture %}{{ sha |
+    strip }}
+  </h2>
 
   <hr />
   <h2>Using `inspect`</h2>

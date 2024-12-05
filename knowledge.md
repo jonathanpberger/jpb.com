@@ -336,6 +336,10 @@ production:
 
 ## Testing Strategy
 - Use html-proofer for automated testing
+- Display git SHA on info page for deployment verification
+  - SHA must be updated automatically in all environments (dev, staging, prod)
+  - Use Rake task :update_git_sha before all builds
+  - Critical for verifying correct deployment version
 - Legacy presentation decks in public_folder should be excluded from tests
 - Focus testing on main site content:
   - Navigation and internal links
