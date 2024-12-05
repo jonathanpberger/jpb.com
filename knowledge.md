@@ -167,9 +167,18 @@ When moving from GitHub Pages (jonathanpberger.github.io/jpb.com) to custom doma
 1. Update _config.yml production settings:
 ```yml
 production:
-  baseurl: ""
+  baseurl: ""  # Must be empty string for custom domain
   url: "https://jonathanpberger.com"
 ```
+
+Important: When moving to custom domain:
+- Clear baseurl in production config (empty string, not "/")
+- Update all asset paths to use site.baseurl
+- Test both with and without trailing slashes
+- Common issues:
+  - CSS not loading: check site.baseurl in asset paths
+  - 404s: verify baseurl is truly empty in production
+  - Mixed content: ensure all URLs use https://
 
 2. Configure GitHub Pages:
    - Go to repo Settings > Pages
