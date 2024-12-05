@@ -335,6 +335,19 @@ production:
   - Variables like page and site need special handling in HAML templates
 
 ## Testing Strategy
+- Two distinct testing approaches:
+  - `rake test`: Uses html-proofer to test rendered HTML in _site directory
+  - `rake test_source`: Tests Jekyll source files before rendering
+- HTMLProofer configuration:
+  - Use :directory_index_file option for source testing
+  - File exclusions must match relative to checked directory
+  - For source testing, exclude _site entirely by not traversing into it
+  - For rendered testing, check only _site directory
+  - Common gotcha: file_ignore patterns are relative to checked directory
+  - Important: When fixing issues:
+    - Use test_source to find and fix problems in source files (e.g., _pages/talks.md)
+    - Ignore errors from _site directory as these are symptoms not causes
+    - Always fix issues in source files, never edit rendered files directly
 - Use html-proofer for automated testing
 - Display git SHA on info page for deployment verification
   - SHA must be updated automatically in all environments (dev, staging, prod)

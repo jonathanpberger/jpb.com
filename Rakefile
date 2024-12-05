@@ -13,12 +13,33 @@ task :test do
     :enforce_https => true,
     :only_4xx => true,
     :file_ignore => [
-      %r{_site/public_folder/.*}  # Ignore all files in _site/public_folder for now
+      %r{public_folder/.*}  # Ignore legacy content
     ]
   }
   HTMLProofer.check_directory("./_site", options).run
 end
 
+task :test_source do
+  options = {
+    :assume_extension => true,
+    :allow_hash_href => true,
+    :check_favicon => true,
+    :check_html => true,
+    :check_img_http => true,
+    :check_opengraph => true,
+    :disable_external => true,
+    :enforce_https => true,
+    :only_4xx => true,
+    :file_ignore => [
+      %r{public_folder/.*}  # Ignore legacy content
+    ],
+    :directory_index_file => true  # Use directory index files
+  }
+  Dir.glob(['**/*.html', '**/*.md']) do |file|
+    next if file.start_with?('_site/')
+    HTMLProofer.check_file(file, options).run
+  end
+end
 
 task :visit do
   sh "open https://jonathanpberger.github.io/jpb.com"
