@@ -30,7 +30,7 @@ task :s => :serve
 task :s => :serve
 task :serve do
   sh "pkill -f jekyll || true"  # Kill existing jekyll processes, don't error if none
-  sh "bundle exec jekyll serve"
+  sh "JEKYLL_ENV=development bundle exec jekyll clean && JEKYLL_ENV=development bundle exec jekyll serve --baseurl=''"
 end
 
 # Deploy tasks

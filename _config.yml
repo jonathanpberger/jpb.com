@@ -4,20 +4,9 @@ description: >-
   Jonathan Berger is a product designer and developer who loves people, 
   technology, and the intersection of the two.
 
-# Default env - use production values since GitHub Pages always uses JEKYLL_ENV=production
+# baseurl being overwritten in Rakefile for now :-/
 baseurl: "/jpb.com"
 url: "https://jonathanpberger.github.io"
-
-# Environment-specific settings
-development:
-  baseurl: ""
-  url: "https://localhost:4000"
-staging:
-  baseurl: "/jpb.com" # for GitHub Pages project site
-  url: "https://jonathanpberger.github.io"
-production:
-  baseurl: "/jpb.com" # for GitHub Pages project site
-  url: "https://jonathanpberger.github.io"
 
 # These will be used when we move to custom domain
 # production:

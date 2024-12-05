@@ -113,13 +113,24 @@
 - External redirects (blog, calendar) need custom handling
 
 ## Environment Configuration
-- Jekyll loads configuration in this order:
-  1. Default settings (top level in _config.yml)
-  2. Environment-specific settings (under environment names)
-  3. Important: Default settings override environment settings if both exist
-     - Remove top-level baseurl/url if using environment configs
-     - Only define defaults if they apply to all environments
-     - Debug with /info page to verify correct values
+- Keep baseurl configuration DRY:
+  - Set baseurl in _config.yml for GitHub Pages compatibility
+  - Override with --baseurl flag for local development
+  - Use {{ site.baseurl }} consistently in templates
+  - Avoid environment-specific baseurl settings
+  - Debug with /info page to verify correct values
+
+## Ruby/Rake Setup
+- Required gems for development:
+  - `rake` for task running
+  - `jekyll` for site generation
+  - `github-pages` for GitHub Pages compatibility
+  - `webrick` for Ruby 3+ compatibility
+- Common issues:
+  - GitHub Pages always uses JEKYLL_ENV=production
+  - Local development should use JEKYLL_ENV=development
+  - Must override baseurl with --baseurl='' for local development
+  - Kill existing Jekyll processes before serving: `pkill -f jekyll`
 - Default baseurl/url provide fallback values
 - Environment settings override defaults when JEKYLL_ENV is set
 - Use debug page (/info) to verify environment configuration
@@ -131,6 +142,9 @@
   - Avoid scattering `site[jekyll.environment]` throughout templates
   - Prefer centralizing environment-specific logic in layouts or includes
   - Consider creating custom Jekyll plugins or Liquid includes for environment handling
+  - Never maintain environment-specific paths (like baseurl) in individual templates
+  - Always handle environment configuration at config level
+  - Use Jekyll filters or includes if path manipulation is needed
 - Common environment issues:
   - Incorrect JEKYLL_ENV setting
   - Missing environment-specific config
