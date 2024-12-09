@@ -66,8 +66,9 @@ task :deploy, [:env] do |t, args|
   env = args[:env] || "staging"
   case env
   when "staging"
+    # Create an empty GIT_SHA file for GitHub Pages
+    File.write('_includes/GIT_SHA', 'GITHUB_PAGES_BUILD')
     # GitHub Pages always uses JEKYLL_ENV=production
-    Rake::Task["update_git_sha"].execute
     sh "JEKYLL_ENV=production bundle exec jekyll build"
     sh "git push origin HEAD:gh-pages"
     sh "open https://github.com/jonathanpberger/jpb.com/actions/"

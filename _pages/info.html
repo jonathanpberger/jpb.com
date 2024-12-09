@@ -7,8 +7,11 @@ permalink: /info/
 <div class="debug-info">
   <h1>Jekyll Site Variables</h1>
   <h2>
-    Git SHA: {% capture sha %}{% include GIT_SHA %}{% endcapture %}{{ sha |
-    strip }}
+    Git SHA: {% if jekyll.environment == "development" %}
+      {{ site.github.build_revision | default: "Development Build" }}
+    {% else %}
+      {{ site.github.build_revision }}
+    {% endif %}
   </h2>
 
   <hr />

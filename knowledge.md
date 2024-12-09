@@ -16,6 +16,10 @@
 - Maintain current styling
 - Keep current routing/URLs working
 
+## Project Context
+- "Credits" refers to codebuff credits, not CV/resume routing
+- Important: Do not confuse requests about "credits" with CV/resume functionality
+
 ## Technical Requirements
 - Avoid non-standard Jekyll plugins that aren't supported by GitHub Pages
 - Preserve all current routes from application.rb
@@ -58,6 +62,15 @@
   - Important: Jekyll's exclude in _config.yml only affects build process
     - Git operations (like submodules) are not affected by Jekyll excludes
     - Must handle Git cleanup separately from Jekyll configuration
+    - GIT_SHA implementation:
+      - Purpose: Show which git SHA is currently deployed at /info
+      - Keep GIT_SHA file in .gitignore to avoid noisy diffs
+      - File only needs to exist during build, not in git history
+      - GitHub Pages runs in safe mode - no symlinks allowed
+      - Common GitHub Pages build failures:
+        - Missing _includes/GIT_SHA file
+        - Symlinks in _includes directory
+        - Files referenced in includes must exist before build starts
     - When removing legacy content:
       - Jekyll exclude prevents files from being built/copied to _site
       - Git still tracks excluded files until explicitly untracked
