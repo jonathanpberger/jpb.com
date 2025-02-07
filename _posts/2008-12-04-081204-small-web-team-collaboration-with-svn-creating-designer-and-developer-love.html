@@ -1,0 +1,199 @@
+---
+layout: post
+title: '081204 Small Web Team Collaboration with SVN: Creating Designer and Developer
+  Love'
+date: 2008-12-04 05:42:51.000000000 -05:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- neat!
+- notes
+tags: []
+meta: {}
+author:
+  login: jonathanpberger
+  email: jonathanpberger@gmail.com
+  display_name: jonathanpberger
+  first_name: Jonathan
+  last_name: Berger
+permalink: "/2008/12/04/081204-small-web-team-collaboration-with-svn-creating-designer-and-developer-love/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body></p>
+<h2 id="announcemnts_ephemera">Announcemnts &amp; Ephemera</h2>
+<ul>
+<li>presenter: <a href="http://www.twitter.com/sstrudeau">Scott Trudeau</a> of <a href="http://www.apartmenttherapy.com">Apartment Therapy</a> Media</li>
+<li>
+<a href="http://www.meetup.com/standardista/">NY Web Standards</a> has a twitter acct! <a href="http://www.twitter.com/NYWebstandards">@NYWebstandards</a>
+</li>
+</ul>
+<h2 id="intro">Intro</h2>
+<ul>
+<li>the inspiration for this has bee “as a developer, this is how I work with designers”</li>
+<li>starting at pando, worked with a series of freelance designers ST came up with a set of best practices and it evolved.  Lots of people said “thanks for teaching me version control”</li>
+<li>that’s the inspiration for this talk.</li>
+<li>Here’s what we found:
+<ul>
+<li>Rules Devs need to do to make their designers lives easier, and</li>
+<li>Things designers need to learn</li>
+</ul>
+</li>
+</ul>
+<h2 id="best_practices">Best Practices</h2>
+<ul>
+<li>use a framework or a quality CMS</li>
+<li>if yr using custom stuff, you want contextual config files.  If yr running yr project on a production server, you’ll have a different base URL, SQL db, etc.  The easier you make it to switch configs, the happier everyone is.</li>
+<li>stole this from RoR: set an environment variable and then the config file can switch that, so you don’t change anything; you check out the project and it just works.  Default to the designer’s config, so they don’t hav et oknow about it.</li>
+<li>
+<p>alternate option: don’t add the config file to the Version Control, and then sym-link to the config.  (do this with drupal): make copies of settings.php and create a bunch of symlinks</p>
+</li>
+<li>
+<p>manage yr SQL schema versions</p>
+</li>
+<li>
+<p>devs should be doing this anyway, but the cleaner it is</p>
+</li>
+<li>
+<p>site dumps (if the site is small enough)</p>
+</li>
+<li>
+<p>if you want to be really fancy, make a test data set</p>
+</li>
+<li>if you (dev) do all these things, the collaborators (designers) don’t need to do to much to play along</li>
+</ul>
+<h2 id="designers_need_to_learn_these_things">Designers Need To Learn these Things</h2>
+<ul>
+<li>install yr local dev environment (eg MAMP or XAMPP on windows)</li>
+<li>create a db and a user</li>
+<li>import a db</li>
+<li>
+<p>use version control</p>
+</li>
+<li>
+<p>devs need to use an MVC pattern so dev can make templates fro designers to work on</p>
+</li>
+</ul>
+<h2 id="setting_up_the_local_dev_enviornment_mamp">Setting up the local dev enviornment: MAMP</h2>
+<ul>
+<li>DL MAMP.  Drag it to the “Applications” folder.  Use it for anything besides RoR. (Use Locomotive for RoR)</li>
+<li>What about Python?  There’s probably something out there (especially w Google App Engine around). Go look for it</li>
+<li>
+<p>The document root is  “/Applications/MAMP/htdocs”; if you put files in this folder, you can access them from “http://localhost:8888”</p>
+</li>
+<li>
+<p>one of the first things ST does is make a shortcut to his app on the desktop so he can find it later</p>
+</li>
+<li>
+<p>ST wrote a MVC app from scratch for demo purposes</p>
+</li>
+</ul>
+<h2 id="basic_svn">Basic SVN</h2>
+<ul>
+<li>create a repository (place to keep files)</li>
+<li>you can check copies out to “working copies”</li>
+<li>when yr done making changes, you can COMMIT to the repository</li>
+<li>every time someone makes a change, you can see what it was and revert back if necessary</li>
+<li>
+<p>this COMMIT pattern will catch multiple changes to the same doc, and mediate conflicting changes.  If yr just using FTP, its easy to overwrite each other’s changes.</p>
+</li>
+<li>
+<p>COMMAND: “<strong>svn info</strong>”: what the situation is; is it in version control?  Where’s the repository?</p>
+</li>
+<li>
+<p>repositories are basically just a URL somewhere.  If you want to start playing with SVN, beanstalkapp.com is a good place to start.  SVN needs to run on an SVN server.  <strong>If you’ve used a wiki, you know about reversions.  This is just like a wiki for yr code.</strong></p>
+</li>
+<li>
+<p>Q: Are there other Version Control systems?  A: yes.  Git is the cool new one, but it really shines with large distributed projects with lots of branches.  It was written by Linus for the Linux project.  For small teams you can work on one branch and SVN does a good job; its more mature, has better tools.  There’s also CVS, which was the predecessor to SVN and is a little clunky.</p>
+</li>
+<li>
+<p>COMMAND: “<strong>svn status</strong>”: shows us if there’s anything changed, weird, or funky.  <strong>As usual on the command line, no news is good news.</strong></p>
+</li>
+<li>
+<p>making a change: ST goes into the template, changes a line of text, and then back to the command line.  “svn status” returns an “M” (for “modified”) before the filename.</p>
+</li>
+<li>
+<p>COMMAND: “<strong>svn diff</strong>”: shows a “-” before the line that was rm’d, and a “+” next to the line added</p>
+</li>
+<li>
+<p>COMMAND: “<strong>svn commit</strong>”: type svn commit -m “changed a line”</p>
+</li>
+<li>
+<p>COMMAND: “<strong>svn update</strong>”:  update’s yr working copy from the repository. If no one’s changed, it just shows you the revision number.  If a newer copy exists on the repository, it updates, yr working copy.</p>
+</li>
+</ul>
+<h2 id="on_windows">On Windows</h2>
+<ul>
+<li>using XAMMP and TortiseSVN</li>
+<li>files live in C:xampphtdocs</li>
+<li>right-click on a folder and you can get some Tortoise features, eg “checkout”</li>
+<li>once TortoiseSVN is installed, files and folders will get a green checkmark when they’re up to date</li>
+<li>Notepad++ is the file editor of choice.  It deals with line endings without complaining and its free.</li>
+<li>If you make a change, the icon will get a red badge</li>
+<li>right-click to commit, you’ll be prompted for yr msg.</li>
+</ul>
+<h2 id="create_a_conflict">Create a conflict</h2>
+<ul>
+<li>change and commit on win</li>
+<li>go to mac, don’t update, make a change, commit</li>
+<li><strong>warning: commit failed</strong></li>
+<li>so now you do “svn update” and see the conflict.  If you browse to the directory, you can see all the versions, appended with “.r#”.</li>
+<li>
+<p>to resolve, do “svn resolved [winning-filename]”, then commit</p>
+</li>
+<li>
+<p><strong>1. always update!</strong></p>
+</li>
+<li><strong>2. test yr changes!</strong></li>
+<li><strong>3. commit them!</strong></li>
+</ul>
+<h2 id="qs">Qs</h2>
+<ul>
+<li>
+<p>Q: What about absolute URLs?  A: avoid absolute URLs. If yr using a framework, there’s always a helper. But if you have to, you can mess with apache and have it redirect the URLs in a Virtual Host Directive.  PITA though.</p>
+</li>
+<li>
+<p>Q: What about “files” in drupal? A: use “svn ignore” or just never add it, it doesn’t matter.  </p>
+</li>
+<li>
+<p>Q: why isn’t the DB in version control?  A: “Version control is not backup”. But do nightly backups in the db.  The schema can be in version control though.</p>
+</li>
+</ul>
+<h2 id="making_a_database">Making a Database</h2>
+<ul>
+<li>go to phpMyAdmin</li>
+<li>make a db called “demo”</li>
+<li>import the “init.sql” db into “demo”</li>
+<li>create a user, give him privs (not global)</li>
+<li>neat trick: create the user first, and hit the “create a db w same name and grant all privs”</li>
+</ul>
+<h2 id="confiq_file">confiq file:</h2>
+<ul>
+<li>
+<p>should just have an array with hosts, user, pass, db names and let the designer manage that</p>
+</li>
+<li>
+<p>you can use SVN on fla’s too if you externalize all the actionscript</p>
+</li>
+</ul>
+<h2 id="tips">tips</h2>
+<ul>
+<li>Pragmatic Programmers version control book is good</li>
+<li>
+<p>lighthouseapp.com is a bug-tracking hosted service that hooks into beanstalk so you can enter the bug ticket number into the message and it’ll address the bug ticket on the commit</p>
+</li>
+<li>
+<p>google has free svn hosting, but only for open source</p>
+</li>
+</ul>
+<h2 id="mac_svn_clients">Mac SVN Clients</h2>
+<ul>
+<li>SVN X</li>
+<li>Versions</li>
+<li>coda has SVN</li>
+<li>Cornerstone</li>
+<li>finder scripts</li>
+</ul>
+<p></body></html></p>

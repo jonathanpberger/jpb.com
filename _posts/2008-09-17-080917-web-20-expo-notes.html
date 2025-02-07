@@ -1,0 +1,326 @@
+---
+layout: post
+title: '080917 Web 2.0 Expo Notes'
+date: 2008-09-17 04:51:52.000000000 -04:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- neat!
+tags: []
+meta: {}
+author:
+  login: jonathanpberger
+  email: jonathanpberger@gmail.com
+  display_name: jonathanpberger
+  first_name: Jonathan
+  last_name: Berger
+permalink: "/2008/09/17/080917-web-20-expo-notes/"
+---
+<p><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body><br />
+<em>I’ve started to post raw notes from events I attend.  For more information, see the <a href="../2008/03/policy-notes-regarding-my-taking-oferrrnotes/">Notes Policy</a>.</em></p>
+<p>## 080917 Web2.0 Expo Notes</p>
+<p>In this episode:<br />
+- John Resig - Processing &amp; Javascript<br />
+- Dan Saffer - Tap is the New Click<br />
+- DHH - Go REST with Rails<br />
+- Joshua Schachter - Lessons Learned in Scaling and Building Social Systems<br />
+- Keynote - Fred Wilson - The History of Tech in NYC<br />
+- Keynote: Deb Shultz - The Death of the Grand Gesture<br />
+- Keynote - Jason Fried - I Started 37 Signals and You Didn't<br />
+- Maria Thomas - Etsy CEO on Growth<br />
+- Gary Vaynercheck - Ad Lib</p>
+<p>## John Resig - Processing &amp; JS</p>
+<p><!--more--><br />
+### Canvas<br />
+- proposed and first implemented in WebKit by apple</p>
+<p>- bunch of primitives (line, rect, etc)<br />
+- NOT vector<br />
+- fill &amp; stroke<br />
+- FAST</p>
+<p><code><br />
+	script<br />
+	window.onload = function();<br />
+	var elem = document.createElement("canvas");<br />
+	elem.width = 500;<br />
+	elem.height = 500;<br />
+	document.body.appendChild( elem );<br />
+	var context = elem.getContext("2d");<br />
+	context.fillStyle = "rgba(0, 0, 0, 1)";<br />
+	context.fillRect(0, 0, elem.width, elem);<br />
+	/script<br />
+</code></p>
+<p>- Canvas can consume other images, other canvases</p>
+<p>- in FF3.1 canvas will be able to consume video<br />
+- in an extension: web pages</p>
+<p>#### Processing<br />
+- data visualization probromming language<br />
+- built on Java<br />
+- lots of libraries</p>
+<p>- strictly typed<br />
+- has classes, inheritance<br />
+- very flat API (functions are globally accessible)<br />
+- two basic methods: setup() (called initially) and draw() (called repeatedly)<br />
+- no event handlers</p>
+<p>- Initialization: setup() is called<br />
+- Draw loop: draw() gets called as fast as possible (unless a framerate is set)<br />
+- drawing area is similar to canvas: translate, scale, rotate, pushmatrix, popmatrix</p>
+<p>#### Processing.js<br />
+- how to run processing on the web?<br />
+- natively with applets (but they suck)<br />
+- two stages: convert to js, recreate methods</p>
+<p>- can we sync a dwg on canvas to music?</p>
+<p>## Dan Saffer - Tap is the New Click</p>
+<p>- public bathrooms are the interaction design labs for the world (dyson airblade)<br />
+- gestural remote control (bang &amp; olafsoR) for messy hands<br />
+- most of this stuyy needs to be displayed in video to get it<br />
+- T-moblie gestural windows</p>
+<p>- M$ Surface (table)<br />
+- Sphere surface w multitouch. awesome for panoramas<br />
+- David Liddle: "we're using bodies evolved for hunting, gathering and gratutionsu violnecfor information age tasts like word processing and spreadsheet tweaking"</p>
+<p>- we're in the middle of an interactio design revolution</p>
+<p>### History of Gestural interface<br />
+- HP 150 - tap on the screen to go to location<br />
+- proto-wii<br />
+- Simon touchscreen phone 1994 IBM &amp; Bell South<br />
+- POS restaurants for 20 yrs<br />
+- kiosks: jet blue</p>
+<p>- two types of interactive gesture<br />
+	- touchscreen (TUI)<br />
+		- single touch<br />
+		- multitouch</p>
+<p>	- freeform<br />
+		- clapper</p>
+<p>- the secret sauce: sensors<br />
+	- pressure<br />
+	- light<br />
+	- acoustic<br />
+	- tilt<br />
+	- motion<br />
+	- orientation</p>
+<p>- other part of the interface: the human hand<br />
+	- finger width: 16-20mm<br />
+	- tip: 8-10mm<br />
+	- pad: 10-14mm</p>
+<p>	- issues:<br />
+		- fingernails (blessing &amp; curse): sometimes they work, sometimes not<br />
+		- fake fingernails: evil<br />
+		- finger oil<br />
+		- fingerprints<br />
+		- (left) hnadedness<br />
+		- accessibility issues<br />
+		- wrist support<br />
+		- gloves<br />
+		- inaccurate (compared to cursor)<br />
+		- attached to a hand (ie, screen coverage)</p>
+<p>- Don't design the target in a way that the hand obscures it when user reaches!</p>
+<p>- Touch Target Size<br />
+	- Fitts Law: distance to target / size of target = time to get to target</p>
+<p>- Tricks:<br />
+	- "iceberg tips": touch area is bigger than the label<br />
+	- adaptive targets: algorithmically guess the target based on info.  Eg when you type "t-h-" on an iPhone, the "e" target on the QWERTY keyboard will be bigger than "w" or "r"</p>
+<p>- Traditional UI element to watch out for:<br />
+	- cursor: don't need it.  You know where yr finger is<br />
+	- mouseover and hover<br />
+	- double-click<br />
+	- right-click<br />
+	- selected default btn (can't just hit "return" fo "Ok / Cancel")<br />
+	- undo (can't un-clap a clapper)</p>
+<p>### Documenting Gestures</p>
+<p>- Dance Notation is a good place to begin.  REALLY unwieldy<br />
+- Annotated wireframes are ok<br />
+- ARchitectural wireframes: size, height, relative to human form. Where are the sensors located<br />
+- "keyframes" - key moments in the activity<br />
+- gestural dwgs<br />
+- storyboards<br />
+- swim lanes: storyboard on top, user action row, machine state row, business logic row, etc</p>
+<p>- timing is often a factor<br />
+- low fidelity:<br />
+	- paper prototype,<br />
+	- man-behind-the-curtain<br />
+	- environments: paper, second-life</p>
+<p>- high-fidelity<br />
+	- off the shelf: chumby, Nokia 8500, M$ table<br />
+	- DIY: arduino</p>
+<p>- Turning Gestures inot code<br />
+	- variables: what are you measuring?<br />
+	- data: get the data from the sensor<br />
+	- computation: determine diffs in data<br />
+	- patterns:<br />
+	- actions</p>
+<p>### Communicating Interactive Gestures<br />
+- how to make people aware there's an interaction available?<br />
+- Ambient Fear in public: people don't like to look stupid in a public space, scared of breaking expensive equipment, etc<br />
+- Attraction Affordance: M$ Table has a great "riverbed" intro to bring people in<br />
+- written instruction ("Touch to Start")<br />
+- small illustrations<br />
+- demonstration<br />
+- symbolic</p>
+<p>### Design<br />
+1. available sensors &amp; input<br />
+2. task that needs to be performed<br />
+3. physiology of the human body</p>
+<p>### Ergonomics of human gesture<br />
+- avoid reptition<br />
+- keep muscles relaxed</p>
+<p>### Rule of Thumb<br />
+- the more complicated the gesture, the fewer people that can do it<br />
+- match the complexity of the gesture to the complexity of the task.<br />
+- simple things should be done simply<br />
+- the best designs are those that "dissolve into behavior" (Naoto Fukasawa)<br />
+- the best designs match the behavior of the system to things people already do</p>
+<p>- designinggesturalinterfaces.com<br />
+kickerstudio.com</p>
+<p>## DHH - Go REST with Rails</p>
+<p>Why am I interested in this stuff?  REST has been around for a while, but its a very practical thing.  Less interested in programming for its own sake than the outcome. Same w REST.  After they built Basecamp, they decided it should have an API.  At the time, APIs were something you bolted on to the side. </p>
+<p>Most web developers haven't read the HTTP spec.  You don't really need the spec to write a web app.  GATHER?  POST?  Who cares?</p>
+<p>That's both the strength and the weakness of the HTTP protocol.</p>
+<p>Most web devs have ignored the past for so long that they're running into problems that have already been solved; we just need to dig down into the layers.  Trying to learn what swart people wrote down 15 yrs ago.</p>
+<p>HTTP is an ogre.<br />
+REST ("Representational State Transfer") is like blue cheese: an acquired taste that's disgusting when you first try.  Once you get hooked, its really tasty.</p>
+<p>WS-Star: an empire of specs detailing how to relate different services to each other.  Associated with SOAP.</p>
+<p>REST has infiltrated Rails<br />
+REST: a single resource that you can do multiple things to.<br />
+	- GET: see<br />
+	- POST: crud<br />
+	- PUT: update or replace<br />
+	- DELETE: destroy the resource</p>
+<p>	the latter two aren't mapped in HTML, which is why they're relatively unused<br />
+	we're simulating the full HTTP spec in HTML with this little hack (hidden form element using POST to implement PUT or DELETE)</p>
+<p>	REST enforces constraints. Treat everything as a single resource, use only those 4 verbs (GET, POST, PUT, DELETE)<br />
+	Some benefits of REST: XML version is pre-built.  This is the "multiple representations" part.  Instead of building another controller (eg XML, API, whatever), REST re-interprets it.  Why should I write it twice?<br />
+	- RoR thinks about this in terms of "respond_to"<br />
+	- everything has a single URL, and with differnte verbs you can do different things to it (read, write, etc)<br />
+	- REST isn't all abstracted away because it DOESN'T NEED TO BE!<br />
+	- SOAP is so complex that when it breaks, yr fuxx0zed</p>
+<p>### Convention over Configuration<br />
+- REST is **another** set of conventions, like RoR, but at a higher level: controllers, interface<br />
+- boost of productivity: not having to make decisions</p>
+<p>people/create<br />
+show<br />
+update<br />
+POST destroy</p>
+<p>- REST help with *spotting natural borders*</p>
+<p>## Joshua Schachter - Lessons Learned in Scaling and Building Social Systems</p>
+<p>### Scale</p>
+<p>types of scaling:</p>
+<p>1. tech<br />
+2. social<br />
+3. personal</p>
+<p>#### Tech Scaling</p>
+<p>- partitioning: get yr users into groups<br />
+- don't use one huge database. it sucks<br />
+- caching: don't go to the database if you can at all help it<br />
+- replicas: fastest performance comes from having the data on disk *in the order you need it*. use multiple replicas if you need<br />
+- auto-increment will hurt you later: it guarantees that yr dada will be in the wrong order later<br />
+- put a proxy in front.  when grandpa on a 2400 baud modem hits you, he's gonna eat up the whole server slot. use a load-balancer or something.  by the time you need it, you'll wish you knew it already</p>
+<p>- sloppiness: synchronicity is a bitch.  decouple interactive performance from other pieces of the system</p>
+<p>#### Social Scaling<br />
+- tend to need very different features at different scales<br />
+- SMALL: with few people, push everyone together into the same room to encourage meeting<br />
+- MEDIUM: features grow to be about mitigating traffic.  1,000,000 users is too big to be a community.</p>
+<p>- coping:<br />
+- scale is good for 3 things:<br />
+	1. utility - hiring the product for a job. why do the users come?<br />
+	2. network effect - value of the system becomes *the other people in the system*.<br />
+	3. revenue - </p>
+<p>	do it in this order! If you start extracting value (in the form of cash) too early, it short circuits.</p>
+<p>	- product should be self-marketing. have the app exhibit as much functionality as necessary before logging in.  registration-flow should be as light as possible.  when you **must** have them register, remember the user's state and return them.</p>
+<p>	- initial marketing vs actual marketing: not necessarily the same.  The quick get may not be as powerful as the ultimate use.  Eg, pausing TV (tivo) isn't as big a benefit as network effects.</p>
+<p>	- layers of the onion: provide ways for people to continually get involved in the system: n00b, user, super-user, priesthood.  Give people the means to market themselves using yr product.</p>
+<p>	- half the traffic came from RSS</p>
+<p>	- figure out the vectors for infection. For DEL, it was the FF extension. Great match; FF bookmarking sucked.  Its ok to use another system as a carrier, but be wary of backing yrself into a corner</p>
+<p>	- book Josh likes: Animals in Translation by Temple ______</p>
+<p>	- use sensible defaults; people were checking "private" even when it was opt-in.  changed it to "do not share" and finally people stopped checking it</p>
+<p>	- don't go too far; do you need to tell the IDs of all the followers?  or just the number of followers?</p>
+<p>	- software doesn't map well to social norms; that's why kids are ok with dropping accounts to lose crappy friends</p>
+<p>	- Spam &amp; Abuse<br />
+	- link exchange: people will build social systems **around** bothering you<br />
+	- don't ban users, legthen or destroy feedback loops. spammers &amp; griefers will come back if you kick them, but they'll never know if you lock them in a box</p>
+<p>	- pretty URLs: prime advertising space<br />
+	- API: add some functionality to [whatever] without building a whole new system. people can fill the gaps that please them</p>
+<p>#### Scaling Yourself</p>
+<p>- when you build stuff, yr gonna do it wrong<br />
+- don't spend a huge amt of time polishing.<br />
+- iterate quickly<br />
+- be lazy, reduce<br />
+- simpler is typically stronger<br />
+- have hygiene around yr ideas.  write EVERYTHNIG down.  Its a goood resource for instipation (or patents)</p>
+<p>- Listen to yr users<br />
+- they love it when you respond.  they never expect to hear from you<br />
+- every week, tally up all the reqs you get and figuer out what to build to engineer those problems</p>
+<p>- Motivations: think very clearly about what yr doing<br />
+- user testing: yr understaning is biased, you need access to the way people look at things with fresh eyes<br />
+- measure and record everything<br />
+- always look for ways to shorten yr feedback loop.  what did you learn?</p>
+<p>### Q&amp;A<br />
+- 60x performance increase: reshuffle records so that instead of storing no disk in the order written (primary key), store by URL, UID or UID, URL</p>
+<p>- 25% of all passwords are "123456", username, or domain name</p>
+<p>- throttling is important.  dictionary attacks are there.  failed passwords are a BIG indicator.</p>
+<p>## Keynote - Fred Wilson - The History of Tech in NYC</p>
+<p>Seed stage deals:</p>
+<p>		SF		NYC<br />
+1995: 	160		20<br />
+2008: 	360 	116</p>
+<p>1991: ZDNet (Ziff davis): put magazines online<br />
+1993: still using proprietary svcs, pre-web. Prodigy come out<br />
+1994: Pseudo, Razorfish. The name "silicon alley" starts being heard. Fred wants to kill that name.  Big media (Time Warner, News Corp) takes its first shot at the web.<br />
+1995: 55 Broad St is converted by the city to a high tech incubator.  Interactive agencies come along.  BYT beta-tests their first web property with the Pope's visit as their beta. Publications come along (Silicon Alley Reporter), online ad networks emergn (eg doubleclick)<br />
+1996: More activity. iVillae, theKnot.com, Flatiron partners<br />
+1997: early successes and failures.  The roll-up starts: Razorfish bought a bunch of agencies. Doubleclikt isthee first NYC internet IPO.<br />
+1998: More success &amp; failure. Kozmo.com. The last year of sanity before the 1st internet wave.<br />
+1999: all the offline companies start coming online.  All hell breaks loose. Dozens of IPOs, acquisitions.  200 startups were funded. 1000s of parties.  Josh Harris &amp; Pseudo.com.  "We Live in Public" is a doc about it.<br />
+2000: March: the Crash. High burn rates kill companies. Fucked Company.  Google comes to NY.<br />
+2001: layoffs, landlords, bankrupticease.<br />
+2002: rock bottom. Doubleclick's "Welocme to Silicon Alley" billboard is taken down.  Calacanis is in LA, Harris is in the catskills.<br />
+2003: renewal. Denton launches Gizmodo. Fred launches AVC.  the term "web 2.0" is coined.  Schacter starts Delicios.<br />
+2004: Heiferman starts the NY Tech meetup. 10 people then, 7000 now. Union Square ventures rasise $125m<br />
+2005: NYTinmes buys about.com: NY's biggest .  Etsy launches.  Y! buys delicious.<br />
+2006: google comes to NY in a big way.  takes over the port authority building.  750 engineers in ny. Web video takes off. Wine Library, Wallstrip.<br />
+2007: 75 early stage tech deals by VC.  Tumblr, Path101, I'minlikewithyou</p>
+<p>NYC is different than Silicon Alley: more creative, more artistic, more connected to media and advertising.</p>
+<p>## Keynote: Deb Shultz - The Death of the Grand Gesture</p>
+<p>beethoven's 5th: musicians understand the grand genture<br />
+-the presonal: human connections aren't binary, but social web apps usually are: "friend or not"? "link of don't link?<br />
+- can't have a continuum without a grand gesture, and vice versa.  Otherwise its all white noise.<br />
+- "Technology changes, humans don't."</p>
+<p>## Keynote - Jason Fried - I Started 37 Signals and You Didn't</p>
+<p>- Software is a great place to be.  You don't have to worry about raw materials or physics; just type.<br />
+- Cost of change is way lower than other industries.  Yr not plumbing.<br />
+- Software can be built anywhere.<br />
+- BUT<br />
+- Doesn't have the same feedback affordances as other things.  Its easy to figure out if a water bottle is well-designed.  Its not so easy to tell if software is well designed on not.<br />
+- What would yr software be like if it was a physical device?  Would it be spikey? Comfy? Etc etc</p>
+<p>- software can quickly devolve if you say "yes" to all yr customers.<br />
+- be the gatekeeper. be the editor.  be the curator.  a curator's job is to say "no".<br />
+- think about yr product as a museum, &amp; yr features as things to hang on the wall<br />
+- software trends towards bloat because there's no visible form<br />
+- once you hit bloat, its hard to go back<br />
+- "make a collection, not a warehouse"<br />
+- attach costs to things.  shuts down a LOT of trouble</p>
+<p>## Maria Thomas - Etsy CEO on Growth</p>
+<p>- grandparents were all small business entrepreneurs<br />
+- Greek word "filotimo": operating with purpose, dignity, and a sense of personal responsibility.  No english translation.  No kidding.<br />
+- only 1/10th of a % of US companies achieve more than $250m/yr revenues<br />
+- how people in a company treat each other and their customers is determinative of whether companies break into that 1/10th<br />
+- listen to end users<br />
+- practice filotimo; keep it human<br />
+- get the products out the door.</p>
+<p>## Gary Vaynercheck - Ad Lib</p>
+<p>- patience &amp; passion.<br />
+- "There is no reason in 2008 to do shit you hate.  You can lose just as much money being happy as hell."<br />
+- listen to yr users? absolutely.  But giving a shit about yr users?  Even better.<br />
+- "Look in the mirron, pickt what you want to do. I pormise you can monetize that shit."<br />
+- hustle. this isn't about parties.<br />
+- getting a buttload of users and flipping it s not a business model.  get a business model.<br />
+- "legacy is better than currency". I want my grandkids being proud of me.</p>
+<p>- the game is changing.  i turned down 40 TV deals. there's no reason for me to share my content.  old media is no longer in control, and not everyone gets that.</p>
+<p>- build yr own brand equity.  believe.  work hard,  know what yr doing.<br />
+- "people are the people that will help you"<br />
+- use all the tools.  connect to people any ande evryway you can<br />
+- we're gonig through a gold rush of branding. yiou don't need the machine anymore.<br />
+- "what do I want to do"<br />
+- "I'm In Like with You" should be a killer</body></html></p>
