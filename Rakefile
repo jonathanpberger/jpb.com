@@ -82,4 +82,9 @@ task :deploy, [:env] do |t, args|
   end
 end
 
+desc "Import WordPress blog"
+task :import_blog do
+  ruby "scripts/import_wordpress.rb"
+end
+
 task :default => [:serve]

@@ -1,0 +1,5 @@
+mkdir -p _private/wordpress
+mkdir -p assets/wp-content/uploads 
+cp -r _private/wordpress/wp-content/uploads/* assets/wp-content/uploads/ 
+git add assets/wp-content/uploads
+git commit -m "Add WordPress media files" 

@@ -36,3 +36,4 @@ exclude:
   - Rakefile
   - knowledge.md
   - public_folder
+  - _private
