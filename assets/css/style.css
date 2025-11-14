@@ -156,3 +156,150 @@ dt {
 .debug-info hr {
   margin: 20px 0;
 } */
+/* Blog styles */
+#blog {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#blog h1 {
+  font-family: "Ars", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 1em;
+  border-bottom: 3px solid;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.post-list {
+  margin-top: 40px;
+}
+
+.post-item {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-title {
+  font-family: "Ars", Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 0 0 10px 0;
+}
+
+.post-title a {
+  border-bottom: none;
+}
+
+.post-title a:hover {
+  border-bottom: 2px solid #333;
+}
+
+.post-meta {
+  font-size: 0.5em;
+  color: #666;
+  margin: 10px 0;
+}
+
+.post-category, .tag {
+  font-style: italic;
+}
+
+.post-excerpt {
+  font-size: 0.6em;
+  line-height: 1.5em;
+  margin-top: 15px;
+}
+
+/* Individual post styles */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+  border-bottom: 3px solid #333;
+  padding-bottom: 20px;
+}
+
+.post-header .post-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 0.6em;
+  line-height: 1.6em;
+}
+
+.post-content h2 {
+  font-size: 1.3em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.post-content h3 {
+  font-size: 1.1em;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.post-content pre,
+.post-content code {
+  font-family: monospace;
+  background-color: #f5f5f5;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.post-content pre {
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.post-tags {
+  margin: 30px 0;
+  font-size: 0.5em;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.post-navigation {
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6em;
+}
+
+.post-navigation .prev {
+  margin-right: auto;
+}
+
+.post-navigation .next {
+  margin-left: auto;
+}
+
+.back-to-blog {
+  margin-top: 30px;
+  font-size: 0.6em;
+}
