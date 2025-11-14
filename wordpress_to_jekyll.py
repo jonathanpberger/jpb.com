@@ -74,13 +74,35 @@ def html_to_markdown(html_content):
 
 def parse_wordpress_export(xml_file):
     """Parse WordPress XML export and extract posts"""
-    tree = ET.parse(xml_file)
-    root = tree.getroot()
+    # Read the file and handle HTML entities
+    with open(xml_file, 'r', encoding='utf-8') as f:
+        xml_content = f.read()
+
+    # Replace common HTML entities that aren't valid in XML
+    html_entities = {
+        '&laquo;': '«',
+        '&raquo;': '»',
+        '&nbsp;': ' ',
+        '&mdash;': '—',
+        '&ndash;': '–',
+        '&ldquo;': '"',
+        '&rdquo;': '"',
+        '&lsquo;': ''',
+        '&rsquo;': ''',
+        '&hellip;': '…',
+        '&bull;': '•',
+    }
+
+    for entity, char in html_entities.items():
+        xml_content = xml_content.replace(entity, char)
+
+    # Parse the modified XML
+    root = ET.fromstring(xml_content)
 
     # WordPress uses namespaces
     namespaces = {
         'content': 'http://purl.org/rss/1.0/modules/content/',
-        'wp': 'http://wordpress.org/export/1.2/',
+        'wp': 'http://wordpress.org/export/1.0/',
         'dc': 'http://purl.org/dc/elements/1.1/'
     }
 
